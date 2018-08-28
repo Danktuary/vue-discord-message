@@ -1,0 +1,8 @@
+{
+  "name": "vue-discord-message",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Danktuary/vue-discord-message.git",
+  "author": "Sanctuary <sanc.pw@gmail.com>",
+  "license": "MIT"
+}
