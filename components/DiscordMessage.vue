@@ -36,11 +36,11 @@ export default {
 
 	created() {
 		const defaultAvatars = {
-			blue: require('./avatars/blue.png'),
-			gray: require('./avatars/gray.png'),
-			green: require('./avatars/green.png'),
-			orange: require('./avatars/orange.png'),
-			red: require('./avatars/red.png'),
+			blue: require('../avatars/blue.png'),
+			gray: require('../avatars/gray.png'),
+			green: require('../avatars/green.png'),
+			orange: require('../avatars/orange.png'),
+			red: require('../avatars/red.png'),
 		};
 
 		this.avatarSrc = defaultAvatars[this.avatar] || this.avatar || defaultAvatars.blue;

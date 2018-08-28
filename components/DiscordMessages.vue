@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style>
-@import './css/fonts.css';
+@import '../css/fonts.css';
 
 .discord-messages {
 	color: #fff;

@@ -1,5 +1,5 @@
-import DiscordMessages from './DiscordMessages.vue';
-import DiscordMessage from './DiscordMessage.vue';
+import DiscordMessages from './components/DiscordMessages.vue';
+import DiscordMessage from './components/DiscordMessage.vue';
 
 const VueDiscordMessage = {
 
