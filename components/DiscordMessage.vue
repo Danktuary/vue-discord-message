@@ -8,7 +8,7 @@
 				<span class="author-username">{{ author }}</span>
 				<span v-if="bot" class="bot-tag">Bot</span>
 			</div>
-			<div class="message-body">
+			<div :class="{ 'author-mentioned': authorMentioned }" class="message-body">
 				<slot></slot>
 			</div>
 		</div>
@@ -31,6 +31,7 @@ export default {
 	data() {
 		return {
 			avatarSrc: '',
+			authorMentioned: false,
 		};
 	},
 
@@ -44,6 +45,10 @@ export default {
 		};
 
 		this.avatarSrc = defaultAvatars[this.avatar] || this.avatar || defaultAvatars.blue;
+	},
+
+	mounted() {
+		this.authorMentioned = this.$children.some(child => child.$props.authorMentioned);
 	},
 };
 </script>
@@ -106,5 +111,6 @@ export default {
 
 .discord-message .message-body {
 	font-size: 0.9em;
+	position: relative;
 }
 </style>

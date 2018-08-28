@@ -1,0 +1,59 @@
+<template>
+	<span class="discord-mention">
+		<slot></slot>
+	</span>
+</template>
+
+<script>
+export default {
+	name: 'Mention',
+
+	props: {
+		authorMentioned: Boolean,
+	},
+};
+</script>
+
+<style>
+.discord-message .discord-mention {
+	color: #7289da;
+	background-color: rgba(114, 137, 218, 0.1);
+	font-weight: 500;
+	padding: 0 1px;
+	cursor: pointer;
+}
+
+.discord-message .discord-mention:hover {
+	color: #fff;
+	background-color: rgba(114, 137, 218, 0.7);
+}
+
+.discord-message .message-body.author-mentioned {
+	background-color: rgba(250, 166, 26, 0.1);
+	border-radius: 0 3px 3px 0;
+	margin: -0.1rem -0.2rem 0.1rem;
+	padding-left: 0.2rem;
+	padding-right: 0.3rem;
+}
+
+.discord-message .message-body.message-body.author-mentioned::before {
+	content: " ";
+	background-color: rgba(250, 166, 26, 0.2);
+	position: absolute;
+	top: 0;
+	left: -6px;
+	bottom: 0;
+	width: 2px;
+	border-left: 4px solid #faa61a;
+	border-radius: 3px 0 0 3px;
+}
+
+.discord-message .message-body.author-mentioned .discord-mention {
+	background-color: unset;
+}
+
+.discord-message .message-body.author-mentioned .discord-mention:hover {
+	color: #7289da;
+	text-decoration: underline;
+}
+</style>
