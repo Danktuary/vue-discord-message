@@ -6,7 +6,7 @@
 
 ![vue-discord-message preview](https://i.imgur.com/Yn62i0l.png)
 
-```html
+```vue
 <discord-messages>
 	<discord-message>
 		Hey guys, I'm new here! Glad to be able to join you all!
