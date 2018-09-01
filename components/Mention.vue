@@ -9,7 +9,7 @@ export default {
 	name: 'Mention',
 
 	props: {
-		authorMentioned: Boolean,
+		highlight: Boolean,
 	},
 };
 </script>
@@ -28,7 +28,7 @@ export default {
 	background-color: rgba(114, 137, 218, 0.7);
 }
 
-.discord-message .message-body.author-mentioned {
+.discord-message .message-body.highlight-mention {
 	background-color: rgba(250, 166, 26, 0.1);
 	border-radius: 0 3px 3px 0;
 	margin: -0.1rem -0.2rem 0.1rem;
@@ -36,7 +36,7 @@ export default {
 	padding-right: 0.3rem;
 }
 
-.discord-message .message-body.message-body.author-mentioned::before {
+.discord-message .message-body.message-body.highlight-mention::before {
 	content: " ";
 	background-color: rgba(250, 166, 26, 0.2);
 	position: absolute;
@@ -48,11 +48,11 @@ export default {
 	border-radius: 3px 0 0 3px;
 }
 
-.discord-message .message-body.author-mentioned .discord-mention {
+.discord-message .message-body.highlight-mention .discord-mention {
 	background-color: unset;
 }
 
-.discord-message .message-body.author-mentioned .discord-mention:hover {
+.discord-message .message-body.highlight-mention .discord-mention:hover {
 	color: #7289da;
 	text-decoration: underline;
 }

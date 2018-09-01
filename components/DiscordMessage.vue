@@ -9,7 +9,7 @@
 					{{ author }}
 				</author-info>
 			</div>
-			<div :class="{ 'author-mentioned': authorMentioned }" class="message-body">
+			<div :class="{ 'highlight-mention': highlightMention }" class="message-body">
 				<author-info v-if="compactMode" :bot="bot" :role-color="roleColor">
 					{{ author }}
 				</author-info>
@@ -40,7 +40,7 @@ export default {
 	data() {
 		return {
 			avatarSrc: '',
-			authorMentioned: false,
+			highlightMention: false,
 			compactMode: false,
 		};
 	},
@@ -59,7 +59,7 @@ export default {
 	},
 
 	mounted() {
-		this.authorMentioned = this.$children.some(child => child.$props.authorMentioned);
+		this.highlightMention = this.$children.some(child => child.$props.highlight);
 	},
 };
 </script>
