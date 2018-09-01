@@ -1,6 +1,6 @@
 <template>
 	<span class="discord-mention">
-		<slot></slot>
+		@<slot></slot>
 	</span>
 </template>
 
