@@ -1,5 +1,5 @@
 <template>
-	<div :class="{ 'discord-light-theme': lightTheme }" class="discord-messages">
+	<div :class="layout" class="discord-messages">
 		<slot></slot>
 	</div>
 </template>
@@ -10,6 +10,16 @@ export default {
 
 	props: {
 		lightTheme: Boolean,
+		compactMode: Boolean,
+	},
+
+	data() {
+		return {
+			layout: {
+				'discord-light-theme': this.lightTheme,
+				'compact-mode': this.compactMode,
+			},
+		};
 	},
 };
 </script>
