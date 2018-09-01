@@ -1,6 +1,6 @@
 <template>
 	<span class="author-info">
-		<span class="author-username">
+		<span :style="{ color: roleColor }" class="author-username">
 			<slot></slot>
 		</span>
 		<span v-if="bot" class="bot-tag">
@@ -15,6 +15,7 @@ export default {
 
 	props: {
 		bot: Boolean,
+		roleColor: String,
 	},
 };
 </script>

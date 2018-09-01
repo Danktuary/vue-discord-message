@@ -5,10 +5,10 @@
 		</div>
 		<div class="message-content">
 			<div v-if="!compactMode">
-				<author-info :bot="bot">{{ author }}</author-info>
+				<author-info :bot="bot" :role-color="roleColor">{{ author }}</author-info>
 			</div>
 			<div :class="{ 'author-mentioned': authorMentioned }" class="message-body">
-				<author-info v-if="compactMode" :bot="bot">{{ author }}</author-info>
+				<author-info v-if="compactMode" :bot="bot" :role-color="roleColor">{{ author }}</author-info>
 				<slot></slot>
 			</div>
 		</div>
@@ -30,6 +30,7 @@ export default {
 		},
 		avatar: String,
 		bot: Boolean,
+		roleColor: String,
 	},
 
 	data() {
