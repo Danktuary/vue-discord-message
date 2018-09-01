@@ -4,11 +4,11 @@
 			<img :src="avatarSrc" :alt="author" />
 		</div>
 		<div class="message-content">
-			<div class="author-header">
-				<span class="author-username">{{ author }}</span>
-				<span v-if="bot" class="bot-tag">Bot</span>
+			<div v-if="!compactMode">
+				<author-info :bot="bot">{{ author }}</author-info>
 			</div>
 			<div :class="{ 'author-mentioned': authorMentioned }" class="message-body">
+				<author-info v-if="compactMode" :bot="bot">{{ author }}</author-info>
 				<slot></slot>
 			</div>
 		</div>
@@ -16,8 +16,12 @@
 </template>
 
 <script>
+import AuthorInfo from './AuthorInfo.vue';
+
 export default {
 	name: 'DiscordMessage',
+
+	components: { AuthorInfo },
 
 	props: {
 		author: {
@@ -32,6 +36,7 @@ export default {
 		return {
 			avatarSrc: '',
 			authorMentioned: false,
+			compactMode: false,
 		};
 	},
 
@@ -45,6 +50,7 @@ export default {
 		};
 
 		this.avatarSrc = defaultAvatars[this.avatar] || this.avatar || defaultAvatars.blue;
+		this.compactMode = this.$parent.$props.compactMode;
 	},
 
 	mounted() {
@@ -79,38 +85,21 @@ export default {
 	border-radius: 50%;
 }
 
-.discord-message .author-header {
-	display: flex;
-	align-items: center;
-	font-size: 15px;
-}
-
-.discord-message .author-header .author-username {
-	font-size: 1.1em;
-	font-weight: 500;
-	letter-spacing: 0.5px;
-}
-
-.discord-light-theme .discord-message .author-header .author-username {
-	color: #23262a;
-}
-
-.discord-message .author-header .bot-tag {
-	background-color: #7289da;
-	font-size: 0.65em;
-	margin-left: 5px;
-	padding: 3px;
-	border-radius: 3px;
-	line-height: 100%;
-	text-transform: uppercase;
-}
-
-.discord-light-theme .discord-message .author-header .bot-tag {
-	color: #fff;
-}
-
 .discord-message .message-body {
 	font-size: 0.9em;
 	position: relative;
+}
+
+.compact-mode .discord-message {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.compact-mode .author-avatar {
+	display: none;
+}
+
+.compact-mode .message-body {
+	margin-left: 0.25em;
 }
 </style>
