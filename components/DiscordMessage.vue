@@ -90,6 +90,10 @@ export default {
 	border-radius: 50%;
 }
 
+.discord-message .message-content {
+	width: 100%;
+}
+
 .discord-message .message-body {
 	font-size: 0.9em;
 	position: relative;
