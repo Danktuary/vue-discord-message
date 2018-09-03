@@ -28,13 +28,11 @@ export default {
 
 	},
 
-	data() {
-		return {
-			mentionCharacter: this.type === 'channel' ? '#' : '@',
-		};
-	},
-
 	computed: {
+		mentionCharacter() {
+			return this.type === 'channel' ? '#' : '@';
+		},
+
 		colorStyle() {
 			if (!this.color || this.type !== 'role') {
 				return {};
