@@ -1,15 +1,23 @@
 <template>
-	<span class="discord-mention">
+	<span
+		:style="colorStyle"
+		class="discord-mention"
+		@mouseover="setHoverColor"
+		@mouseout="resetHoverColor"
+	>
 		{{ mentionCharacter }}<slot></slot>
 	</span>
 </template>
 
 <script>
+import hexToRgba from 'hex-to-rgba';
+
 export default {
 	name: 'Mention',
 
 	props: {
 		highlight: Boolean,
+		color: String,
 		type: {
 			type: String,
 			default: 'user',
@@ -24,6 +32,29 @@ export default {
 		return {
 			mentionCharacter: this.type === 'channel' ? '#' : '@',
 		};
+	},
+
+	computed: {
+		colorStyle() {
+			if (!this.color || this.type !== 'role') {
+				return {};
+			}
+
+			return {
+				'color': this.color,
+				'background-color': hexToRgba(this.color, 0.1),
+			};
+		},
+	},
+
+	methods: {
+		setHoverColor() {
+			this.$el.style.backgroundColor = hexToRgba(this.color, 0.3);
+		},
+
+		resetHoverColor() {
+			this.$el.style.backgroundColor = hexToRgba(this.color, 0.1);
+		},
 	},
 };
 </script>
