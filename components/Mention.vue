@@ -47,10 +47,12 @@ export default {
 
 	methods: {
 		setHoverColor() {
+			if (!this.color || this.type !== 'role') return;
 			this.$el.style.backgroundColor = hexToRgba(this.color, 0.3);
 		},
 
 		resetHoverColor() {
+			if (!this.color || this.type !== 'role') return;
 			this.$el.style.backgroundColor = hexToRgba(this.color, 0.1);
 		},
 	},
