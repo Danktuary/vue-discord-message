@@ -1,6 +1,6 @@
 <template>
 	<span class="discord-mention">
-		@<slot></slot>
+		{{ mentionCharacter }}<slot></slot>
 	</span>
 </template>
 
@@ -10,6 +10,20 @@ export default {
 
 	props: {
 		highlight: Boolean,
+		type: {
+			type: String,
+			default: 'user',
+			validator(value) {
+				return ['user', 'channel', 'role'].includes(value);
+			},
+		},
+
+	},
+
+	data() {
+		return {
+			mentionCharacter: this.type === 'channel' ? '#' : '@',
+		};
 	},
 };
 </script>
