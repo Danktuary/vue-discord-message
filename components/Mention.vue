@@ -1,10 +1,5 @@
 <template>
-	<span
-		:style="colorStyle"
-		class="discord-mention"
-		@mouseover="setHoverColor"
-		@mouseout="resetHoverColor"
-	>
+	<span :style="colorStyle" class="discord-mention">
 		{{ mentionCharacter }}<slot></slot>
 	</span>
 </template>
@@ -42,14 +37,26 @@ export default {
 		},
 	},
 
+	mounted() {
+		if (this.color && this.type === 'role') {
+			this.$el.addEventListener('mouseover', this.setHoverColor);
+			this.$el.addEventListener('mouseout', this.resetHoverColor);
+		}
+	},
+
+	beforeDestroy() {
+		if (this.color && this.type === 'role') {
+			this.$el.removeEventListener('mouseover', this.setHoverColor);
+			this.$el.removeEventListener('mouseout', this.resetHoverColor);
+		}
+	},
+
 	methods: {
 		setHoverColor() {
-			if (!this.color || this.type !== 'role') return;
 			this.$el.style.backgroundColor = hexToRgba(this.color, 0.3);
 		},
 
 		resetHoverColor() {
-			if (!this.color || this.type !== 'role') return;
 			this.$el.style.backgroundColor = hexToRgba(this.color, 0.1);
 		},
 	},
