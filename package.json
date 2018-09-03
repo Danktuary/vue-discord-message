@@ -5,7 +5,16 @@
   "repository": "https://github.com/Danktuary/vue-discord-message.git",
   "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ext js,vue"
+  },
   "dependencies": {
     "hex-to-rgba": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-aqua": "^4.3.4",
+    "eslint-plugin-vue": "^4.7.1"
   }
 }
