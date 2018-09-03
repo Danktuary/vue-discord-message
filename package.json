@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/Danktuary/vue-discord-message.git",
   "author": "Sanctuary <sanc.pw@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "hex-to-rgba": "^1.0.1"
+  }
 }
