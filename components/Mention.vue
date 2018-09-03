@@ -94,7 +94,7 @@ export default {
 }
 
 .discord-message .message-body.highlight-mention .discord-mention {
-	background-color: unset;
+	background-color: unset !important;
 }
 
 .discord-message .message-body.highlight-mention .discord-mention:hover {
