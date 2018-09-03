@@ -25,7 +25,6 @@ export default {
 				return ['user', 'channel', 'role'].includes(value);
 			},
 		},
-
 	},
 
 	computed: {
