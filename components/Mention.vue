@@ -34,12 +34,10 @@ export default {
 		},
 
 		colorStyle() {
-			if (!this.color || this.type !== 'role') {
-				return {};
-			}
+			if (!this.color || this.type !== 'role') return {};
 
 			return {
-				'color': this.color,
+				color: this.color,
 				'background-color': hexToRgba(this.color, 0.1),
 			};
 		},
