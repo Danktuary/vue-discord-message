@@ -21,23 +21,23 @@ export default {
 </script>
 
 <style>
-.author-info {
+.discord-message .author-info {
 	display: flex;
 	align-items: center;
 	font-size: 15px;
 }
 
-.author-info .author-username {
+.discord-message .author-info .author-username {
 	font-size: 1.1em;
 	font-weight: 500;
 	letter-spacing: 0.5px;
 }
 
-.discord-light-theme .author-info .author-username {
+.discord-light-theme .discord-message .author-info .author-username {
 	color: #23262a;
 }
 
-.author-info .bot-tag {
+.discord-message .author-info .bot-tag {
 	background-color: #7289da;
 	font-size: 0.65em;
 	margin-left: 5px;
@@ -47,16 +47,16 @@ export default {
 	text-transform: uppercase;
 }
 
-.discord-light-theme .author-info .bot-tag {
+.discord-light-theme .discord-message .author-info .bot-tag {
 	color: #fff;
 }
 
-.compact-mode .author-info {
+.compact-mode .discord-message .author-info {
 	display: inline-flex;
 	flex-direction: row-reverse;
 }
 
-.compact-mode .author-info .bot-tag {
+.compact-mode .discord-message .author-info .bot-tag {
 	margin-left: 0;
 	margin-right: 5px;
 	padding-left: 3px;
