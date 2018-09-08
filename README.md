@@ -1,6 +1,20 @@
 # Vue Discord Message
 
- Vue components to easily build and display fake Discord messages on your webpages.
+Vue components to easily build and display fake Discord messages on your webpages.
+
+## Features
+
+* Design modeled after Discord itself
+* Comfy and compact mode supported
+* Dark and light themes supported
+* Set the message author's username
+* Set the message author's avatar (choose from the default avatars or provide your own)
+* Set the message author's role color
+* Display the "bot" tag on messages
+* Display fake user, role, and channel mentions
+* Highlight mentions (for when the "logged in user" is pinged)
+* Set mention colors (only used for role pings)
+* Simple syntax!
 
 ## Preview
 
