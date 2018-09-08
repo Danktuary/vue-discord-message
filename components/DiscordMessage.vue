@@ -15,6 +15,7 @@
 				</author-info>
 				<slot></slot>
 			</div>
+			<slot name="embeds"></slot>
 		</div>
 	</div>
 </template>

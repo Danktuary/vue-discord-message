@@ -14,6 +14,7 @@ Vue components to easily build and display fake Discord messages on your webpage
 * Display fake user, role, and channel mentions
 * Highlight mentions (for when the "logged in user" is pinged)
 * Set mention colors (only used for role pings)
+* Complete embed support
 * Simple syntax!
 
 ## Preview
