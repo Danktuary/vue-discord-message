@@ -69,6 +69,7 @@ export default {
 <style>
 .discord-message {
 	display: flex;
+	font-size: 0.9em;
 	padding: 1em 0.5em;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -97,7 +98,6 @@ export default {
 }
 
 .discord-message .message-body {
-	font-size: 0.9em;
 	position: relative;
 }
 
