@@ -60,7 +60,7 @@ export default {
 
 	mounted() {
 		this.highlightMention = this.$children.some(child => {
-			return child.$props.highlight && child.$props.type !== 'channel';
+			return child.$options.name === 'Mention' && child.$props.highlight && child.$props.type !== 'channel';
 		});
 	},
 };
