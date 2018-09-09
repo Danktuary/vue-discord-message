@@ -6,7 +6,6 @@ import EmbedField from './components/EmbedField.vue';
 import Mention from './components/Mention.vue';
 
 const VueDiscordMessage = {
-
 	install(Vue) {
 		Vue.component('discord-messages', DiscordMessages);
 		Vue.component('discord-message', DiscordMessage);
@@ -15,7 +14,6 @@ const VueDiscordMessage = {
 		Vue.component('embed-field', EmbedField);
 		Vue.component('mention', Mention);
 	},
-
 };
 
 export default VueDiscordMessage;
