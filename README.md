@@ -63,7 +63,6 @@ npm install vue-discord-message
 // index.js
 import Vue from 'vue';
 import DiscordMessage from 'vue-discord-message';
-import App from './App.vue'
 
 Vue.use(DiscordMessage);
 ```
