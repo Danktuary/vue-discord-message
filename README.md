@@ -49,3 +49,158 @@ Vue components to easily build and display fake Discord messages on your webpage
 	</discord-message>
 </discord-messages>
 ```
+
+## Installation
+
+```bash
+yarn add vue-discord-message
+
+# or if you prefer npm
+npm install vue-discord-message
+```
+
+```js
+// index.js
+import Vue from 'vue';
+import DiscordMessage from 'vue-discord-message';
+import App from './App.vue'
+
+Vue.use(DiscordMessage);
+```
+
+## Usage
+
+The syntax is kept fairly simple. Here's a basic example of a regular conversation:
+
+```vue
+<discord-messages>
+	<discord-message>
+		Hey guys, I'm new here! Glad to be able to join you all!
+	</discord-message>
+	<discord-message author="Dawn" avatar="red">
+		Hi, I'm new here too!
+	</discord-message>
+	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
+	</discord-message>
+</discord-messages>
+```
+
+### DiscordMessages component
+
+A wrapper for any child `<discord-message>` components. Must be used in order for messages to display properly.
+
+#### Properties
+
+| Prop | Type | Optional | Default Value | Description |
+| --- | --- | --- | --- | --- |
+| light-theme | Boolean | ✅ | false | Whether all the messages in this block should use light theme or not. |
+| compact-mode | Boolean | ✅ | false | Whether all the messages in this block should use compact mode or not. |
+
+### DiscordMessage component
+
+A Discord message component. The default slot is used for the message's content.
+
+#### Properties
+
+| Prop | Type | Optional | Default Value | Description |
+| --- | --- | --- | --- | --- |
+| author | String | ✅ | 'User' | The message author's username. |
+| avatar | String | ✅ | 'blue' | The message author's avatar. Can be a shortcut string, relative path, or external link. Shortcuts available: red, blue, gray, green, orange.
+| bot | Boolean | ✅ | false | Whether the message author is a bot or not. |
+| role-color | String | ✅ | | The message author's primary role color. |
+
+### Mention component
+
+A mention that can be used within messages. The default slot is used for the mention's content.
+
+#### Properties
+
+| Prop | Type | Optional | Default Value | Description |
+| --- | --- | --- | --- | --- |
+| highlight | Boolean | ✅ | false | Whether this entire message block should be highlighted (to emulate the "logged in user" being pinged). |
+| color | String | ✅ | | The color to use for this mention. Only works on role mentions. |
+| type | String | ✅ | 'user' | The type of mention this should be. Valid values: `user`, `channel`, `role` |
+
+### DiscordEmbed component
+
+An embed that can be attached to the end of your messages. The default slot is used for the embed's description. The `footer` slot is used for the footer text.
+
+#### Properties
+
+| Prop | Type | Optional | Default Value | Description |
+| --- | --- | --- | --- | --- |
+| color | String | ✅ | | The color to use for the embed's left border. |
+| author | Object | ✅ | {} | The author data to use. |
+| author.name | String | ✅ | | The author's name. |
+| author.image | String | ✅ | | The author's avatar URL. |
+| author.url | String | ✅ | | The URL to open when you click on the author's name. |
+| title | String | ✅ | | The embed title. |
+| url | String | ✅ | | The URL to open when you click on the embed title. |
+| thumbnail | String | ✅ | | The thumbnail image to use. |
+| image | String | ✅ | | The embed image to use (displayed at the bottom). |
+| footer-image | String | ✅ | | The image to use next to the footer text. |
+| timestamp | Date|String | ✅ | | The timestamp to use for the footer text. When supplying a string, the format must be `01/31/2000`. |
+
+#### Notes
+
+To ensure the embed gets displayed correctly inside your message, be sure to give it the proper `slot` attribute.
+
+```vue
+<discord-message>
+	Hi, I'm part of the normal message content.
+	<discord-embed slot="embeds" color="#0099ff">
+		Hi, I'm part of the embed message content.
+	</discord-embed>
+</discord-message>
+```
+
+### EmbedFields component
+
+A wrapper for any child `<embed-field>` components. Must be used in order for fields to display properly.
+
+#### Notes
+
+To ensure the embed fields gets displayed correctly inside your embed, be sure to give it the proper `slot` attribute.
+
+```vue
+<discord-message>
+	<discord-embed slot="embeds">
+		Hi, I'm part of the embed message content.
+		<embed-fields slot="fields">
+			<!-- Embed fields go here -->
+		</embed-fields>
+	</discord-embed>
+</discord-message>
+```
+
+### EmbedField component
+
+An embed field component.
+
+#### Properties
+
+| Prop | Type | Optional | Default Value | Description |
+| --- | --- | --- | --- | --- |
+| title | String | ❌ | | The field's title. |
+| inline | Boolean | ✅ | false | Whether this field should be displayed inline or not. |
+
+#### Notes
+
+At least 2 consecutive fields need to be marked as inline in order for them to actually display next to each other. The maximum amount of inline fields is 3, and drops to 2 if an embed thumbnail is used.
+
+```vue
+<discord-message>
+	<discord-embed slot="embeds">
+		Hi, I'm part of the embed message content.
+		<embed-fields slot="fields">
+			<embed-field :inline="true" title="Inline field">
+				Field content.
+			</embed-field>
+			<embed-field :inline="true" title="Inline field">
+				Field content.
+			</embed-field>
+		</embed-fields>
+	</discord-embed>
+</discord-message>
+```
