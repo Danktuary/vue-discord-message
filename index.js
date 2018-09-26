@@ -16,4 +16,8 @@ const VueDiscordMessage = {
 	},
 };
 
+if (typeof window !== 'undefined' && window.Vue) {
+	window.Vue.use(VueDiscordMessage);
+}
+
 export default VueDiscordMessage;
