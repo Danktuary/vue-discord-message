@@ -139,7 +139,7 @@ An embed that can be attached to the end of your messages. The default slot is u
 | thumbnail | String | ✅ | | The thumbnail image to use. |
 | image | String | ✅ | | The embed image to use (displayed at the bottom). |
 | footer-image | String | ✅ | | The image to use next to the footer text. |
-| timestamp | Date|String | ✅ | | The timestamp to use for the footer text. When supplying a string, the format must be `01/31/2000`. |
+| timestamp | Date\|String | ✅ | | The timestamp to use for the footer text. When supplying a string, the format must be `01/31/2000`. |
 
 #### Notes
 
