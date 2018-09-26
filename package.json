@@ -1,6 +1,16 @@
 {
   "name": "vue-discord-message",
   "version": "1.0.0",
+  "description": "Vue components to easily build and display fake Discord messages on your webpages.",
+  "keywords": [
+    "vue",
+    "discord",
+    "message",
+    "fake",
+    "mock",
+    "component",
+    "embed"
+  ],
   "main": "index.js",
   "repository": "https://github.com/Danktuary/vue-discord-message.git",
   "author": "Sanctuary <sanc.pw@gmail.com>",
