@@ -93,8 +93,8 @@ A wrapper for any child `<discord-message>` components. Must be used in order fo
 
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
-| light-theme | Boolean | ✅ | false | Whether all the messages in this block should use light theme or not. |
-| compact-mode | Boolean | ✅ | false | Whether all the messages in this block should use compact mode or not. |
+| light-theme | Boolean | ✅ | `false` | Whether all the messages in this block should use light theme or not. |
+| compact-mode | Boolean | ✅ | `false` | Whether all the messages in this block should use compact mode or not. |
 
 ### DiscordMessage component
 
@@ -104,9 +104,9 @@ A Discord message component. The default slot is used for the message's content.
 
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
-| author | String | ✅ | 'User' | The message author's username. |
-| avatar | String | ✅ | 'blue' | The message author's avatar. Can be a shortcut string, relative path, or external link. Shortcuts available: red, blue, gray, green, orange.
-| bot | Boolean | ✅ | false | Whether the message author is a bot or not. |
+| author | String | ✅ | `'User'` | The message author's username. |
+| avatar | String | ✅ | `'blue'` | The message author's avatar. Can be a shortcut string, relative path, or external link. Shortcuts available: red, blue, gray, green, orange.
+| bot | Boolean | ✅ | `false` | Whether the message author is a bot or not. |
 | role-color | String | ✅ | | The message author's primary role color. |
 
 ### Mention component
@@ -117,9 +117,9 @@ A mention that can be used within messages. The default slot is used for the men
 
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
-| highlight | Boolean | ✅ | false | Whether this entire message block should be highlighted (to emulate the "logged in user" being pinged). |
+| highlight | Boolean | ✅ | `false` | Whether this entire message block should be highlighted (to emulate the "logged in user" being pinged). |
 | color | String | ✅ | | The color to use for this mention. Only works on role mentions. |
-| type | String | ✅ | 'user' | The type of mention this should be. Valid values: `user`, `channel`, `role` |
+| type | String | ✅ | `'user'` | The type of mention this should be. Valid values: `user`, `channel`, `role` |
 
 ### DiscordEmbed component
 
@@ -130,7 +130,7 @@ An embed that can be attached to the end of your messages. The default slot is u
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | color | String | ✅ | | The color to use for the embed's left border. |
-| author | Object | ✅ | {} | The author data to use. |
+| author | Object | ✅ | `{}` | The author data to use. |
 | author.name | String | ✅ | | The author's name. |
 | author.image | String | ✅ | | The author's avatar URL. |
 | author.url | String | ✅ | | The URL to open when you click on the author's name. |
@@ -182,7 +182,7 @@ An embed field component.
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | title | String | ❌ | | The field's title. |
-| inline | Boolean | ✅ | false | Whether this field should be displayed inline or not. |
+| inline | Boolean | ✅ | `false` | Whether this field should be displayed inline or not. |
 
 #### Notes
 
