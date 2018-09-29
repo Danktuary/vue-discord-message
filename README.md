@@ -124,6 +124,16 @@ Vue.use(DiscordMessage, {
 
 If you're using Webpack, you should use `require()` when dealing with relative paths.
 
+Do note that you can override the default avatar value by providing a `default` key. The default value is `'blue'`, but you can change it to something like `'red'`, a relative path, or an external link.
+
+```js
+Vue.use(DiscordMessage, {
+	avatars: {
+		default: 'https://i.imgur.com/BOlehTj.jpg',
+	},
+});
+```
+
 ### Mention component
 
 A mention that can be used within messages. The default slot is used for the mention's content.

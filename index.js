@@ -6,14 +6,18 @@ import EmbedField from './components/EmbedField.vue';
 import Mention from './components/Mention.vue';
 
 const VueDiscordMessage = {
-	install(Vue, { avatars } = {}) {
-		Vue.prototype.$discordAvatars = Object.assign(avatars || {}, {
+	install(Vue, { avatars = {} } = {}) {
+		const discordAvatars = {
 			blue: require('./avatars/blue.png'),
 			gray: require('./avatars/gray.png'),
 			green: require('./avatars/green.png'),
 			orange: require('./avatars/orange.png'),
 			red: require('./avatars/red.png'),
-		});
+		};
+
+		discordAvatars.default = discordAvatars[avatars.default] || avatars.default || discordAvatars.blue;
+
+		Vue.prototype.$discordAvatars = Object.assign(avatars, discordAvatars);
 
 		Vue.component('discord-messages', DiscordMessages);
 		Vue.component('discord-message', DiscordMessage);

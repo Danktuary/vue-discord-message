@@ -49,7 +49,7 @@ export default {
 	created() {
 		const defaultAvatars = this.$root.$discordAvatars;
 
-		this.avatarSrc = defaultAvatars[this.avatar] || this.avatar || defaultAvatars.blue;
+		this.avatarSrc = defaultAvatars[this.avatar] || this.avatar || defaultAvatars.default;
 		this.compactMode = this.$parent.$props.compactMode;
 	},
 
