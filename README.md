@@ -105,9 +105,24 @@ A Discord message component. The default slot is used for the message's content.
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | author | String | ✅ | `'User'` | The message author's username. |
-| avatar | String | ✅ | `'blue'` | The message author's avatar. Can be a shortcut string, relative path, or external link. Shortcuts available: red, blue, gray, green, orange.
+| avatar | String | ✅ | `'blue'` | The message author's avatar. Can be a shortcut string, relative path, or external link.
 | bot | Boolean | ✅ | `false` | Whether the message author is a bot or not. |
 | role-color | String | ✅ | | The message author's primary role color. |
+
+#### Notes
+
+The current shortcut strings available are "blue", "gray", "green", "orange", and "red". If you want to add your own shortcuts, you can use the 2nd parameter in the `Vue.use()` call.
+
+```js
+Vue.use(DiscordMessage, {
+	avatars: {
+		djs: require('../src/assets/discord-avatar-djs.png'),
+		jojo: 'https://i.imgur.com/BOlehTj.jpg',
+	},
+});
+```
+
+If you're using Webpack, you should use `require()` when dealing with relative paths.
 
 ### Mention component
 
