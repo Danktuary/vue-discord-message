@@ -11,12 +11,15 @@
     "component",
     "embed"
   ],
-  "main": "index.js",
+  "main": "dist/VueDiscordMessage.umd.js",
+  "module": "index.js",
+  "unpkg": "dist/VueDiscordMessage.umd.min.js",
   "repository": "https://github.com/Danktuary/vue-discord-message.git",
   "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext js,vue"
+    "lint": "eslint . --ext js,vue",
+    "build": "vue-cli-service build --target lib --name VueDiscordMessage ./index.js"
   },
   "dependencies": {
     "hex-to-rgba": "^1.0.1"
@@ -25,6 +28,11 @@
     "babel-eslint": "^9.0.0",
     "eslint": "^5.5.0",
     "eslint-config-aqua": "^4.3.4",
-    "eslint-plugin-vue": "^4.7.1"
+    "eslint-plugin-vue": "^4.7.1",
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
   }
 }
