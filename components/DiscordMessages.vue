@@ -25,12 +25,10 @@ export default {
 </script>
 
 <style>
-@import '../css/fonts.css';
-
 .discord-messages {
 	color: #fff;
 	background-color: #36393e;
-	font-family: 'Roboto', sans-serif;
+	font-family: sans-serif;
 	padding: 0.1em 0.5em;
 	line-height: 170%;
 	border: 1px solid rgba(255, 255, 255, 0.05);

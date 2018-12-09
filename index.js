@@ -6,7 +6,7 @@ import EmbedField from './components/EmbedField.vue';
 import Mention from './components/Mention.vue';
 
 const VueDiscordMessage = {
-	install(Vue, { avatars = {} } = {}) {
+	install(Vue, { avatars = {}, disableFont = false } = {}) {
 		const discordAvatars = {
 			blue: require('./avatars/blue.png'),
 			gray: require('./avatars/gray.png'),
@@ -18,6 +18,8 @@ const VueDiscordMessage = {
 		discordAvatars.default = discordAvatars[avatars.default] || avatars.default || discordAvatars.blue;
 
 		Vue.prototype.$discordAvatars = Object.assign(avatars, discordAvatars);
+
+		if (!disableFont) require('./css/fonts.css');
 
 		Vue.component('discord-messages', DiscordMessages);
 		Vue.component('discord-message', DiscordMessage);

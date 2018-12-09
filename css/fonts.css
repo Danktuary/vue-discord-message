@@ -1,13 +1,5 @@
-@font-face {
-	font-family: 'Roboto';
-	font-weight: normal;
-	font-style: normal;
-	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
-}
+ @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 
-@font-face {
-	font-family: 'Roboto';
-	font-weight: 500;
-	font-style: normal;
-	src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+.discord-messages {
+	font-family: 'Roboto', sans-serif;
 }
