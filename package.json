@@ -21,7 +21,7 @@
   "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "lint": "eslint . --ext js,vue",
     "build": "vue-cli-service build --target lib --name VueDiscordMessage ./index.js"
   },
