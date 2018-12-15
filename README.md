@@ -68,9 +68,9 @@ And then register it as a Vue plugin.
 ```js
 // index.js
 import Vue from 'vue';
-import DiscordMessage from 'vue-discord-message';
+import VueDiscordMessage from 'vue-discord-message';
 
-Vue.use(DiscordMessage);
+Vue.use(VueDiscordMessage);
 ```
 
 ### Browser build
@@ -95,7 +95,7 @@ By default, this plugin uses the Google Fonts CDN to pull in the Roboto font. Th
 
 ```js
 // index.js
-Vue.use(DiscordMessage, {
+Vue.use(VueDiscordMessage, {
 	disableFont: true,
 });
 ```
@@ -110,7 +110,7 @@ Vue.use(DiscordMessage, {
 The current avatar shortcut strings available are "blue", "gray", "green", "orange", and "red". If you want to add your own shortcuts, you can use the 2nd parameter in the `Vue.use()` call.
 
 ```js
-Vue.use(DiscordMessage, {
+Vue.use(VueDiscordMessage, {
 	avatars: {
 		djs: require('./assets/discord-avatar-djs.png'),
 		jojo: 'https://i.imgur.com/BOlehTj.jpg',
@@ -123,7 +123,7 @@ If you're using Webpack, you should use `require()` when dealing with relative p
 Do note that you can override the default avatar value by providing a `default` key. The default value is `'blue'`, but you can change it to something like `'red'`, a relative path, or an external link.
 
 ```js
-Vue.use(DiscordMessage, {
+Vue.use(VueDiscordMessage, {
 	avatars: {
 		default: 'https://i.imgur.com/BOlehTj.jpg',
 	},
