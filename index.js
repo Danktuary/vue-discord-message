@@ -5,7 +5,7 @@ import EmbedFields from './components/EmbedFields.vue';
 import EmbedField from './components/EmbedField.vue';
 import Mention from './components/Mention.vue';
 
-const VueDiscordMessage = {
+export default {
 	install(Vue, { avatars = {}, disableFont = false } = {}) {
 		const discordAvatars = {
 			blue: require('./avatars/blue.png'),
@@ -29,9 +29,3 @@ const VueDiscordMessage = {
 		Vue.component('mention', Mention);
 	},
 };
-
-if (typeof window !== 'undefined' && window.Vue) {
-	window.Vue.use(VueDiscordMessage);
-}
-
-export default VueDiscordMessage;

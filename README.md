@@ -75,11 +75,18 @@ Vue.use(DiscordMessage);
 
 ### Browser build
 
-If you're using a browser build, you can pull it in via unpkg and it'll automatically register as a plugin:
+If you're using a browser build, you can pull it in via unpkg:
 
 ```html
 <script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/vue-discord-message"></script>
+<script>
+Vue.use(VueDiscordMessage);
+
+new Vue({
+	el: '#app',
+});
+</script>
 ```
 
 ### Plugin options
