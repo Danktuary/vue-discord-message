@@ -11,9 +11,6 @@
     "component",
     "embed"
   ],
-  "files": [
-    "dist"
-  ],
   "main": "dist/VueDiscordMessage.umd.js",
   "module": "index.js",
   "unpkg": "dist/VueDiscordMessage.umd.min.js",
