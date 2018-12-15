@@ -52,12 +52,18 @@ Vue components to easily build and display fake Discord messages on your webpage
 
 ## Installation
 
+### Package managers
+
+If you're using a package manager, you should install it like so:
+
 ```bash
 yarn add vue-discord-message
 
 # or if you prefer npm
 npm install vue-discord-message
 ```
+
+And then register it as a Vue plugin.
 
 ```js
 // index.js
@@ -67,14 +73,23 @@ import DiscordMessage from 'vue-discord-message';
 Vue.use(DiscordMessage);
 ```
 
+### Browser build
+
+If you're using a browser build, you can pull it in via unpkg and it'll automatically register as a plugin:
+
+```html
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-discord-message"></script>
+```
+
 ### Plugin options
 
-By default, this plugin uses the Google Fonts CDN to pull in the Roboto font. If you want to provide your own font instead, you can disable it and override the CSS.
+By default, this plugin uses the Google Fonts CDN to pull in the Roboto font. This isn't the same font Discord uses, so if you want to provide your own, you can disable it and override the CSS.
 
 ```js
 // index.js
 Vue.use(DiscordMessage, {
-	disableDefaultFont: true,
+	disableFont: true,
 });
 ```
 
@@ -90,7 +105,7 @@ The current avatar shortcut strings available are "blue", "gray", "green", "oran
 ```js
 Vue.use(DiscordMessage, {
 	avatars: {
-		djs: require('../src/assets/discord-avatar-djs.png'),
+		djs: require('./assets/discord-avatar-djs.png'),
 		jojo: 'https://i.imgur.com/BOlehTj.jpg',
 	},
 });
