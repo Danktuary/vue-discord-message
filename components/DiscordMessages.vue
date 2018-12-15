@@ -28,6 +28,7 @@ export default {
 .discord-messages {
 	color: #fff;
 	background-color: #36393e;
+	font-size: 16px;
 	font-family: sans-serif;
 	padding: 0.1em 0.5em;
 	line-height: 170%;
