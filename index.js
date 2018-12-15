@@ -6,7 +6,9 @@ import EmbedField from './components/EmbedField.vue';
 import Mention from './components/Mention.vue';
 
 export default {
-	install(Vue, { avatars = {}, disableFont = false } = {}) {
+	install(Vue, options) {
+		const { avatars = {}, componentNames = {} } = options;
+
 		const discordAvatars = {
 			blue: require('./avatars/blue.png'),
 			gray: require('./avatars/gray.png'),
@@ -19,13 +21,13 @@ export default {
 
 		Vue.prototype.$discordAvatars = Object.assign(avatars, discordAvatars);
 
-		if (!disableFont) require('./css/fonts.css');
+		if (!options.disableFont) require('./css/fonts.css');
 
-		Vue.component('discord-messages', DiscordMessages);
-		Vue.component('discord-message', DiscordMessage);
-		Vue.component('discord-embed', DiscordEmbed);
-		Vue.component('embed-fields', EmbedFields);
-		Vue.component('embed-field', EmbedField);
-		Vue.component('mention', Mention);
+		Vue.component(componentNames['discord-messages'] || 'discord-messages', DiscordMessages);
+		Vue.component(componentNames['discord-message'] || 'discord-message', DiscordMessage);
+		Vue.component(componentNames['discord-embed'] || 'discord-embed', DiscordEmbed);
+		Vue.component(componentNames['embed-fields'] || 'embed-fields', EmbedFields);
+		Vue.component(componentNames['embed-field'] || 'embed-field', EmbedField);
+		Vue.component(componentNames.mention || 'mention', Mention);
 	},
 };
