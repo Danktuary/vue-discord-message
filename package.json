@@ -12,7 +12,7 @@
     "embed"
   ],
   "main": "dist/VueDiscordMessage.umd.js",
-  "module": "index.js",
+  "module": "src/index.js",
   "unpkg": "dist/VueDiscordMessage.umd.min.js",
   "repository": "https://github.com/Danktuary/vue-discord-message.git",
   "author": "Sanctuary <sanc.pw@gmail.com>",
@@ -20,7 +20,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext js,vue",
-    "build": "vue-cli-service build --target lib --name VueDiscordMessage ./index.js"
+    "build": "vue-cli-service build --target lib --name VueDiscordMessage ./src/index.js"
   },
   "dependencies": {
     "hex-to-rgba": "^1.0.1"
