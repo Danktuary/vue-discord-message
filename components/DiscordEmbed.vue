@@ -118,19 +118,6 @@ export default {
 	color: rgba(79, 83, 91, 0.9);
 }
 
-.discord-embed a {
-	color: #0096cf;
-	text-decoration: none;
-}
-
-.discord-light-theme .discord-embed a {
-	color: #00b0f4;
-}
-
-.discord-embed a:hover {
-	text-decoration: underline;
-}
-
 .discord-embed .left-border {
 	background-color: #4f545c;
 	flex-shrink: 0;

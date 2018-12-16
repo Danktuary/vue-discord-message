@@ -77,6 +77,20 @@ export default {
 	border-bottom-width: 0;
 }
 
+.discord-message a {
+	color: #0096cf;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.discord-light-theme .discord-message a {
+	color: #00b0f4;
+}
+
+.discord-message a:hover {
+	text-decoration: underline;
+}
+
 .discord-message .author-avatar {
 	margin-right: 1rem;
 	min-width: 40px;
