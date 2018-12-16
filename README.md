@@ -88,6 +88,8 @@ Vue.use(VueDiscordMessage);
 
 ### Plugin options
 
+#### Default font
+
 By default, this plugin uses the Google Fonts CDN to pull in the Roboto font. This isn't the same font Discord uses, so if you want to provide your own, you can disable it and override the CSS.
 
 ```js
@@ -103,6 +105,8 @@ Vue.use(VueDiscordMessage, {
 	font-family: 'Your Font', sans-serif;
 }
 ```
+
+#### Avatar shortcuts
 
 The current avatar shortcut strings available are "blue", "gray", "green", "orange", and "red". If you want to add your own shortcuts, you can use the 2nd parameter in the `Vue.use()` call.
 
@@ -123,6 +127,23 @@ Do note that you can override the default avatar value by providing a `default` 
 Vue.use(VueDiscordMessage, {
 	avatars: {
 		default: 'https://i.imgur.com/BOlehTj.jpg',
+	},
+});
+```
+
+#### Renaming the components
+
+If you want to give the components different names than the default ones, due to possible naming conflictions or whatever other reason you may have, you can do so.
+
+```js
+Vue.use(VueDiscordMessage, {
+	componentNames: {
+		'discord-messages': 'd-messages',
+		'discord-message': 'd-message',
+		'discord-embed': 'd-embed',
+		'embed-fields': 'e-fields',
+		'embed-field': 'e-field',
+		mention: 'd-mention',
 	},
 });
 ```
