@@ -26,7 +26,7 @@
 <script>
 import AuthorInfo from './AuthorInfo.vue';
 import filters from '../util/filters.js';
-import validators from '../util/validtors.js';
+import validators from '../util/validators.js';
 
 export default {
 	name: 'DiscordMessage',
