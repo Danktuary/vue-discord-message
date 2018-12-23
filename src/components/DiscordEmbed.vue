@@ -46,12 +46,13 @@
 </template>
 
 <script>
-import { dates } from '../util/filters.js';
+import filters from '../util/filters.js';
+import validators from '../util/validtors.js';
 
 export default {
 	name: 'DiscordEmbed',
 
-	filters: dates,
+	filters: filters.dates,
 
 	props: {
 		color: String,
@@ -68,15 +69,7 @@ export default {
 		footerImage: String,
 		timestamp: {
 			type: [Date, String],
-			validator(value) {
-				const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
-
-				if (typeof value === 'string' && !dateRegex.test(value)) {
-					return false;
-				}
-
-				return true;
-			},
+			validator: validators.dates.validator,
 		},
 	},
 
