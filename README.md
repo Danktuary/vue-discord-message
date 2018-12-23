@@ -189,6 +189,7 @@ A Discord message component. The default slot is used for the message's content.
 | avatar | String | ✅ | `'blue'` | The message author's avatar. Can be a shortcut string, relative path, or external link.
 | bot | Boolean | ✅ | `false` | Whether the message author is a bot or not. |
 | role-color | String | ✅ | | The message author's primary role color. |
+| timestamp | Date\|String | ✅ | | The timestamp to use for the message date. When supplying a string, the format must be `01/31/2000`. |
 
 ### Mention component
 

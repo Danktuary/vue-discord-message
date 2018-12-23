@@ -8,6 +8,9 @@
 				<author-info :bot="bot" :role-color="roleColor">
 					{{ author }}
 				</author-info>
+				<span v-if="timestamp" class="message-timestamp">
+					{{ timestamp | formatDate | padZeroes }}
+				</span>
 			</div>
 			<div :class="{ 'highlight-mention': highlightMention }" class="message-body">
 				<author-info v-if="compactMode" :bot="bot" :role-color="roleColor">
@@ -22,11 +25,15 @@
 
 <script>
 import AuthorInfo from './AuthorInfo.vue';
+import filters from '../util/filters.js';
+import validators from '../util/validtors.js';
 
 export default {
 	name: 'DiscordMessage',
 
 	components: { AuthorInfo },
+
+	filters: filters.dates,
 
 	props: {
 		author: {
@@ -36,6 +43,11 @@ export default {
 		avatar: String,
 		bot: Boolean,
 		roleColor: String,
+		timestamp: {
+			type: [Date, String],
+			default: () => new Date(),
+			validator: validators.dates.validator,
+		},
 	},
 
 	data() {
@@ -100,6 +112,12 @@ export default {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+}
+
+.discord-message .message-timestamp {
+	color: #fff3;
+	font-size: 0.75rem;
+	margin-left: 0.3rem;
 }
 
 .discord-message .message-content {
