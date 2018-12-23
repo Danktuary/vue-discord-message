@@ -18,6 +18,7 @@
   "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "serve": "vue-cli-service serve --open demo",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext js,vue",
     "build": "vue-cli-service build --target lib --name VueDiscordMessage ./src/index.js"
