@@ -6,7 +6,7 @@ import EmbedField from './components/EmbedField.vue';
 import Mention from './components/Mention.vue';
 
 export default {
-	install(Vue, options) {
+	install(Vue, options = {}) {
 		const { avatars = {}, componentNames = {} } = options;
 
 		const discordAvatars = {
