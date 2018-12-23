@@ -22,7 +22,7 @@ export default {
 
 <style>
 .discord-message .author-info {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	font-size: 15px;
 }
