@@ -17,6 +17,7 @@
 					{{ author }}
 				</author-info>
 				<slot></slot>
+				<span v-if="edited" class="message-edited">(edited)</span>
 			</div>
 			<slot name="embeds"></slot>
 		</div>
@@ -42,6 +43,7 @@ export default {
 		},
 		avatar: String,
 		bot: Boolean,
+		edited: Boolean,
 		roleColor: String,
 		timestamp: {
 			type: [Date, String],
@@ -118,6 +120,11 @@ export default {
 	color: #fff3;
 	font-size: 0.75rem;
 	margin-left: 0.3rem;
+}
+
+.discord-message .message-edited {
+	color: #fff3;
+	font-size: 10px;
 }
 
 .discord-message .message-content {
