@@ -51,12 +51,12 @@ export default {
 	color: #fff;
 }
 
-.compact-mode .discord-message .discord-author-info {
+.discord-compact-mode .discord-message .discord-author-info {
 	display: inline-flex;
 	flex-direction: row-reverse;
 }
 
-.compact-mode .discord-message .discord-author-info .discord-bot-tag {
+.discord-compact-mode .discord-message .discord-author-info .discord-bot-tag {
 	margin-left: 0;
 	margin-right: 5px;
 	padding-left: 3px;
