@@ -1,5 +1,5 @@
 <template>
-	<div class="embed-fields">
+	<div class="discord-embed-fields">
 		<slot></slot>
 	</div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style>
-.discord-embed .embed-fields {
+.discord-embed .discord-embed-fields {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 5px;
