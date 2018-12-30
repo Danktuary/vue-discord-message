@@ -158,7 +158,7 @@ export default {
 	color: #4f545c;
 }
 
-.discord-embed .embed-author .discord-author-image {
+.discord-embed .discord-embed-author .discord-author-image {
 	width: 20px;
 	height: 20px;
 	margin-right: 8px;
