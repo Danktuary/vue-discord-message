@@ -1,9 +1,9 @@
 <template>
-	<span class="author-info">
-		<span :style="{ color: roleColor }" class="author-username">
+	<span class="discord-author-info">
+		<span :style="{ color: roleColor }" class="discord-author-username">
 			<slot></slot>
 		</span>
-		<span v-if="bot" class="bot-tag">
+		<span v-if="bot" class="discord-bot-tag">
 			Bot
 		</span>
 	</span>
@@ -21,23 +21,23 @@ export default {
 </script>
 
 <style>
-.discord-message .author-info {
+.discord-message .discord-author-info {
 	display: inline-flex;
 	align-items: center;
 	font-size: 15px;
 }
 
-.discord-message .author-info .author-username {
+.discord-message .discord-author-info .discord-author-username {
 	font-size: 1.1em;
 	font-weight: 500;
 	letter-spacing: 0.5px;
 }
 
-.discord-light-theme .discord-message .author-info .author-username {
+.discord-light-theme .discord-message .discord-author-info .discord-author-username {
 	color: #23262a;
 }
 
-.discord-message .author-info .bot-tag {
+.discord-message .discord-author-info .discord-bot-tag {
 	background-color: #7289da;
 	font-size: 0.65em;
 	margin-left: 5px;
@@ -47,16 +47,16 @@ export default {
 	text-transform: uppercase;
 }
 
-.discord-light-theme .discord-message .author-info .bot-tag {
+.discord-light-theme .discord-message .discord-author-info .discord-bot-tag {
 	color: #fff;
 }
 
-.compact-mode .discord-message .author-info {
+.compact-mode .discord-message .discord-author-info {
 	display: inline-flex;
 	flex-direction: row-reverse;
 }
 
-.compact-mode .discord-message .author-info .bot-tag {
+.compact-mode .discord-message .discord-author-info .discord-bot-tag {
 	margin-left: 0;
 	margin-right: 5px;
 	padding-left: 3px;
