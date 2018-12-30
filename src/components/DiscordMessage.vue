@@ -135,16 +135,16 @@ export default {
 	position: relative;
 }
 
-.compact-mode .discord-message {
+.discord-compact-mode .discord-message {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 }
 
-.compact-mode .discord-author-avatar {
+.discord-compact-mode .discord-author-avatar {
 	display: none;
 }
 
-.compact-mode .discord-message-body {
+.discord-compact-mode .discord-message-body {
 	margin-left: 0.25em;
 }
 </style>
