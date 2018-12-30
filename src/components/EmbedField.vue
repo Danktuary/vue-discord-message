@@ -1,6 +1,6 @@
 <template>
-	<div :class="{ 'inline-field': inline }" class="embed-field">
-		<div class="field-title">{{ title }}</div>
+	<div :class="{ 'discord-inline-field': inline }" class="discord-embed-field">
+		<div class="discord-field-title">{{ title }}</div>
 		<slot></slot>
 	</div>
 </template>
@@ -20,24 +20,24 @@ export default {
 </script>
 
 <style>
-.discord-embed .embed-field {
+.discord-embed .discord-embed-field {
 	min-width: 100%;
 	margin-top: 5px;
 }
 
-.discord-embed .embed-field.inline-field {
+.discord-embed .discord-embed-field.discord-inline-field {
 	flex-grow: 1;
 	flex-basis: auto;
 	min-width: 150px;
 }
 
-.discord-embed .embed-field .field-title {
+.discord-embed .discord-embed-field .discord-field-title {
 	color: #fff;
 	font-weight: 500;
 	margin-bottom: 5px;
 }
 
-.discord-light-theme .discord-embed .embed-field .field-title {
+.discord-light-theme .discord-embed .discord-embed-field .discord-field-title {
 	color: rgba(79, 83, 91, 0.9);
 }
 </style>
