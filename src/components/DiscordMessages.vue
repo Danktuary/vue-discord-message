@@ -17,7 +17,7 @@ export default {
 		return {
 			layout: {
 				'discord-light-theme': this.lightTheme,
-				'compact-mode': this.compactMode,
+				'discord-compact-mode': this.compactMode,
 			},
 		};
 	},

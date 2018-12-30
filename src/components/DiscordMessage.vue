@@ -1,23 +1,23 @@
 <template>
 	<div class="discord-message">
-		<div class="author-avatar">
+		<div class="discord-author-avatar">
 			<img :src="avatarSrc" :alt="author" />
 		</div>
-		<div class="message-content">
+		<div class="discord-message-content">
 			<div v-if="!compactMode">
 				<author-info :bot="bot" :role-color="roleColor">
 					{{ author }}
 				</author-info>
-				<span v-if="timestamp" class="message-timestamp">
+				<span v-if="timestamp" class="discord-message-timestamp">
 					{{ timestamp | formatDate | padZeroes }}
 				</span>
 			</div>
-			<div :class="{ 'highlight-mention': highlightMention }" class="message-body">
+			<div :class="{ 'discord-highlight-mention': highlightMention }" class="discord-message-body">
 				<author-info v-if="compactMode" :bot="bot" :role-color="roleColor">
 					{{ author }}
 				</author-info>
 				<slot></slot>
-				<span v-if="edited" class="message-edited">(edited)</span>
+				<span v-if="edited" class="discord-message-edited">(edited)</span>
 			</div>
 			<slot name="embeds"></slot>
 		</div>
@@ -105,46 +105,46 @@ export default {
 	text-decoration: underline;
 }
 
-.discord-message .author-avatar {
+.discord-message .discord-author-avatar {
 	margin-right: 1rem;
 	min-width: 40px;
 }
 
-.discord-message .author-avatar img {
+.discord-message .discord-author-avatar img {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 }
 
-.discord-message .message-timestamp {
+.discord-message .discord-message-timestamp {
 	color: #fff3;
 	font-size: 0.75rem;
 	margin-left: 0.3rem;
 }
 
-.discord-message .message-edited {
+.discord-message .discord-message-edited {
 	color: #fff3;
 	font-size: 10px;
 }
 
-.discord-message .message-content {
+.discord-message .discord-message-content {
 	width: 100%;
 }
 
-.discord-message .message-body {
+.discord-message .discord-message-body {
 	position: relative;
 }
 
-.compact-mode .discord-message {
+.discord-compact-mode .discord-message {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 }
 
-.compact-mode .author-avatar {
+.discord-compact-mode .discord-author-avatar {
 	display: none;
 }
 
-.compact-mode .message-body {
+.discord-compact-mode .discord-message-body {
 	margin-left: 0.25em;
 }
 </style>
