@@ -248,10 +248,9 @@ An embed that can be attached to the end of your messages. The default slot is u
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | color | String | ✅ | | The color to use for the embed's left border. |
-| author | Object | ✅ | `{}` | The author data to use. |
-| author.name | String | ✅ | | The author's name. |
-| author.image | String | ✅ | | The author's avatar URL. |
-| author.url | String | ✅ | | The URL to open when you click on the author's name. |
+| authorName | String | ✅ | | The author's name. |
+| authorImage | String | ✅ | | The author's avatar URL. |
+| authorUrl | String | ✅ | | The URL to open when you click on the author's name. |
 | title | String | ✅ | | The embed title. |
 | url | String | ✅ | | The URL to open when you click on the embed title. |
 | thumbnail | String | ✅ | | The thumbnail image to use. |

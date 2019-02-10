@@ -56,12 +56,9 @@ export default {
 
 	props: {
 		color: String,
-		author: {
-			type: Object,
-			default() {
-				return {};
-			},
-		},
+		authorName: String,
+		authorImage: String,
+		authorUrl: String,
 		title: String,
 		url: String,
 		thumbnail: String,
@@ -74,6 +71,14 @@ export default {
 	},
 
 	computed: {
+		author() {
+			return {
+				name: this.authorName,
+				image: this.authorImage,
+				url: this.authorUrl,
+			};
+		},
+
 		showFooter() {
 			return this.$slots.footer || this.timestamp;
 		},
