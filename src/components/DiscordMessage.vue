@@ -53,15 +53,15 @@ export default {
 		user: String,
 	},
 
+	data() {
+		return {
+			highlightMention: false,
+		};
+	},
+
 	computed: {
 		compactMode() {
 			return this.$parent.$props.compactMode;
-		},
-
-		highlightMention() {
-			return this.$children.some(child => {
-				return child.$options.name === 'Mention' && child.$props.highlight && child.$props.type !== 'channel';
-			});
 		},
 
 		profile() {
@@ -78,6 +78,12 @@ export default {
 
 			return Object.assign(defaults, profile);
 		},
+	},
+
+	mounted() {
+		this.highlightMention = this.$children.some(child => {
+			return child.$options.name === 'Mention' && child.$props.highlight && child.$props.type !== 'channel';
+		});
 	},
 };
 </script>
