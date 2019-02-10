@@ -7,7 +7,7 @@ import Mention from './components/Mention.vue';
 
 export default {
 	install(Vue, options = {}) {
-		const { avatars = {}, componentNames = {} } = options;
+		const { avatars = {}, componentNames = {}, profiles = {} } = options;
 
 		const discordAvatars = {
 			blue: require('./avatars/blue.png'),
@@ -19,7 +19,10 @@ export default {
 
 		discordAvatars.default = discordAvatars[avatars.default] || avatars.default || discordAvatars.blue;
 
-		Vue.prototype.$discordAvatars = Object.assign(avatars, discordAvatars);
+		Vue.prototype.$discordMessage = {
+			avatars: Object.assign(avatars, discordAvatars),
+			profiles,
+		};
 
 		if (!options.disableFont) require('./css/fonts.css');
 

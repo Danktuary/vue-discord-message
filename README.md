@@ -131,6 +131,40 @@ Vue.use(VueDiscordMessage, {
 });
 ```
 
+#### Profile shortcuts
+
+Sometimes you'll want to use the same message data across multiple messages. You can do so by providing an object of profiles in the plugin options.
+
+```js
+Vue.use(VueDiscordMessage, {
+	profiles: {
+		sanc: {
+			author: 'Sanctuary',
+			avatar: 'https://i.imgur.com/FPWMhCa.png',
+		},
+		rinon: {
+			author: 'Rinon',
+			avatar: 'https://i.imgur.com/axQ9wJl.png',
+			bot: true,
+			roleColor: '#ee82ee',
+		},
+	},
+});
+```
+
+And then in your Vue templates:
+
+```vue
+<discord-messages>
+	<discord-message user="rinon">
+		Welcome, <mention>Sanctuary</mention>, to our server!
+	</discord-message>
+	<discord-message user="sanc">
+		Hey, glad to be here!
+	</discord-message>
+</discord-messages>
+```
+
 #### Renaming the components
 
 If you want to give the components different names than the default ones, due to possible naming conflictions or whatever other reason you may have, you can do so.
@@ -191,6 +225,7 @@ A Discord message component. The default slot is used for the message's content.
 | edited | Boolean | ✅ | `false` | Whether the message has been edited or not. |
 | role-color | String | ✅ | | The message author's primary role color. |
 | timestamp | Date\|String | ✅ | | The timestamp to use for the message date. When supplying a string, the format must be `01/31/2000`. |
+| user | String | ✅ | | The name user whose profile you want to assign to this message. |
 
 ### Mention component
 

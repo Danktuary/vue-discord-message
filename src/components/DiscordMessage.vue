@@ -1,20 +1,20 @@
 <template>
 	<div class="discord-message">
 		<div class="discord-author-avatar">
-			<img :src="avatarSrc" :alt="author" />
+			<img :src="profile.avatar" :alt="profile.author" />
 		</div>
 		<div class="discord-message-content">
 			<div v-if="!compactMode">
-				<author-info :bot="bot" :role-color="roleColor">
-					{{ author }}
+				<author-info :bot="profile.bot" :role-color="profile.roleColor">
+					{{ profile.author }}
 				</author-info>
 				<span v-if="timestamp" class="discord-message-timestamp">
 					{{ timestamp | formatDate | padZeroes }}
 				</span>
 			</div>
 			<div :class="{ 'discord-highlight-mention': highlightMention }" class="discord-message-body">
-				<author-info v-if="compactMode" :bot="bot" :role-color="roleColor">
-					{{ author }}
+				<author-info v-if="compactMode" :bot="profile.bot" :role-color="profile.roleColor">
+					{{ profile.author }}
 				</author-info>
 				<slot></slot>
 				<span v-if="edited" class="discord-message-edited">(edited)</span>
@@ -50,27 +50,34 @@ export default {
 			default: () => new Date(),
 			validator: validators.dates.validator,
 		},
+		user: String,
 	},
 
-	data() {
-		return {
-			avatarSrc: '',
-			highlightMention: false,
-			compactMode: false,
-		};
-	},
+	computed: {
+		compactMode() {
+			return this.$parent.$props.compactMode;
+		},
 
-	created() {
-		const defaultAvatars = this.$root.$discordAvatars;
+		highlightMention() {
+			return this.$children.some(child => {
+				return child.$options.name === 'Mention' && child.$props.highlight && child.$props.type !== 'channel';
+			});
+		},
 
-		this.avatarSrc = defaultAvatars[this.avatar] || this.avatar || defaultAvatars.default;
-		this.compactMode = this.$parent.$props.compactMode;
-	},
+		profile() {
+			const discord = this.$root.$discordMessage;
+			const resolveAvatar = avatar => discord.avatars[avatar] || avatar || discord.avatars.default;
+			const defaults = {
+				author: this.author,
+				bot: this.bot,
+				roleColor: this.roleColor,
+			};
 
-	mounted() {
-		this.highlightMention = this.$children.some(child => {
-			return child.$options.name === 'Mention' && child.$props.highlight && child.$props.type !== 'channel';
-		});
+			const profile = discord.profiles[this.user] || {};
+			profile.avatar = resolveAvatar(profile.avatar || this.avatar);
+
+			return Object.assign(defaults, profile);
+		},
 	},
 };
 </script>
