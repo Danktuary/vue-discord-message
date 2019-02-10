@@ -30,7 +30,7 @@ export default {
 	background-color: #36393e;
 	font-size: 16px;
 	font-family: sans-serif;
-	padding: 0.1em 0.5em;
+	padding: 2px 8px;
 	line-height: 170%;
 	border: 1px solid rgba(255, 255, 255, 0.05);
 }

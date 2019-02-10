@@ -110,6 +110,10 @@ export default {
 	text-decoration: none;
 }
 
+.discord-message a:hover {
+	text-decoration: underline;
+}
+
 .discord-light-theme .discord-message a {
 	color: #00b0f4;
 }
@@ -119,7 +123,8 @@ export default {
 }
 
 .discord-message .discord-author-avatar {
-	margin-right: 1rem;
+	margin-top: 1px;
+	margin-right: 16px;
 	min-width: 40px;
 }
 
@@ -131,8 +136,8 @@ export default {
 
 .discord-message .discord-message-timestamp {
 	color: #fff3;
-	font-size: 0.75rem;
-	margin-left: 0.3rem;
+	font-size: 12px;
+	margin-left: 3px;
 }
 
 .discord-message .discord-message-edited {
@@ -142,6 +147,8 @@ export default {
 
 .discord-message .discord-message-content {
 	width: 100%;
+	line-height: 160%;
+	font-weight: normal;
 }
 
 .discord-message .discord-message-body {

@@ -80,9 +80,9 @@ export default {
 .discord-message .discord-message-body.discord-highlight-mention {
 	background-color: rgba(250, 166, 26, 0.1);
 	border-radius: 0 3px 3px 0;
-	margin: -0.1rem -0.2rem 0.1rem;
-	padding-left: 0.2rem;
-	padding-right: 0.3rem;
+	margin-left: -3px;
+	padding-left: 3px;
+	padding-right: 5px;
 }
 
 .discord-message .discord-message-body.discord-message-body.discord-highlight-mention::before {
