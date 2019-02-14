@@ -223,7 +223,7 @@ A Discord message component. The default slot is used for the message's content.
 | avatar | String | ✅ | `'blue'` | The message author's avatar. Can be a shortcut string, relative path, or external link.
 | bot | Boolean | ✅ | `false` | Whether the message author is a bot or not. |
 | edited | Boolean | ✅ | `false` | Whether the message has been edited or not. |
-| role-color | String | ✅ | | The message author's primary role color. |
+| role-color | String | ✅ | | The message author's primary role color. Can be any [CSS color value](https://www.w3schools.com/cssref/css_colors_legal.asp). |
 | timestamp | Date\|String | ✅ | | The timestamp to use for the message date. When supplying a string, the format must be `01/31/2000`. |
 | user | String | ✅ | | The name user whose profile you want to assign to this message. |
 
@@ -236,7 +236,7 @@ A mention that can be used within messages. The default slot is used for the men
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | highlight | Boolean | ✅ | `false` | Whether this entire message block should be highlighted (to emulate the "logged in user" being pinged). |
-| color | String | ✅ | | The color to use for this mention. Only works on role mentions. |
+| color | String | ✅ | | The color to use for this mention. Only works on role mentions, and must be in hex format. |
 | type | String | ✅ | `'user'` | The type of mention this should be. Valid values: `user`, `channel`, `role` |
 
 ### DiscordEmbed component
@@ -247,7 +247,7 @@ An embed that can be attached to the end of your messages. The default slot is u
 
 | Prop | Type | Optional | Default Value | Description |
 | --- | --- | --- | --- | --- |
-| color | String | ✅ | | The color to use for the embed's left border. |
+| color | String | ✅ | | The color to use for the embed's left border. Can be any [CSS color value](https://www.w3schools.com/cssref/css_colors_legal.asp). |
 | authorName | String | ✅ | | The author's name. |
 | authorImage | String | ✅ | | The author's avatar URL. |
 | authorUrl | String | ✅ | | The URL to open when you click on the author's name. |
@@ -255,7 +255,7 @@ An embed that can be attached to the end of your messages. The default slot is u
 | url | String | ✅ | | The URL to open when you click on the embed title. |
 | thumbnail | String | ✅ | | The thumbnail image to use. |
 | image | String | ✅ | | The embed image to use (displayed at the bottom). |
-| footer-image | String | ✅ | | The image to use next to the footer text. |
+| footer-ifmage | String | ✅ | | The image to use next to the footer text. |
 | timestamp | Date\|String | ✅ | | The timestamp to use for the footer text. When supplying a string, the format must be `01/31/2000`. |
 
 #### Notes
