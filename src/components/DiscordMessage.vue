@@ -39,7 +39,7 @@ export default {
 	props: {
 		author: {
 			type: String,
-			default: 'User',
+			'default': 'User',
 		},
 		avatar: String,
 		bot: Boolean,
@@ -47,7 +47,7 @@ export default {
 		roleColor: String,
 		timestamp: {
 			type: [Date, String],
-			default: () => new Date(),
+			'default': () => new Date(),
 			validator: validators.dates.validator,
 		},
 		user: String,

@@ -27,13 +27,13 @@
     "hex-to-rgba": "^1.0.1"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^5.5.0",
-    "eslint-config-aqua": "^4.3.4",
-    "eslint-plugin-vue": "^4.7.1",
     "@vue/cli-plugin-babel": "^3.0.1",
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-sora": "^2.0.0",
+    "eslint-plugin-vue": "^4.7.1",
     "vue": "^2.5.16",
     "vue-template-compiler": "^2.5.16"
   }

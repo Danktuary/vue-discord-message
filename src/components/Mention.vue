@@ -15,7 +15,7 @@ export default {
 		color: String,
 		type: {
 			type: String,
-			default: 'user',
+			'default': 'user',
 			validator(value) {
 				return ['user', 'channel', 'role'].includes(value);
 			},
