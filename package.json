@@ -19,9 +19,11 @@
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve --open demo",
-    "prepublishOnly": "npm run build",
+    "build": "vue-cli-service build --target lib --name VueDiscordMessage ./src/index.js",
+    "docs:serve": "vuepress dev docs --open",
+    "docs:build": "vuepress build docs",
     "lint": "eslint . --ext js,vue",
-    "build": "vue-cli-service build --target lib --name VueDiscordMessage ./src/index.js"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "hex-to-rgba": "^1.0.1"
@@ -35,6 +37,7 @@
     "eslint-config-sora": "^2.0.0",
     "eslint-plugin-vue": "^4.7.1",
     "vue": "^2.5.16",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "vuepress": "^1.0.2"
   }
 }
