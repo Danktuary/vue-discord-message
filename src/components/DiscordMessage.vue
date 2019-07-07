@@ -8,14 +8,19 @@
 				<author-info :bot="profile.bot" :role-color="profile.roleColor">
 					{{ profile.author }}
 				</author-info>
-				<span v-if="timestamp" class="discord-message-timestamp">
+				<span class="discord-message-timestamp">
 					{{ timestamp | formatDate | padZeroes }}
 				</span>
 			</div>
 			<div :class="{ 'discord-highlight-mention': highlightMention }" class="discord-message-body">
-				<author-info v-if="compactMode" :bot="profile.bot" :role-color="profile.roleColor">
-					{{ profile.author }}
-				</author-info>
+				<template v-if="compactMode">
+					<span class="discord-message-timestamp">
+						{{ timestamp | formatDate | padZeroes }}
+					</span>
+					<author-info :bot="profile.bot" :role-color="profile.roleColor">
+						{{ profile.author }}
+					</author-info>
+				</template>
 				<slot></slot>
 				<span v-if="edited" class="discord-message-edited">(edited)</span>
 			</div>
@@ -28,6 +33,8 @@
 import AuthorInfo from './AuthorInfo.vue';
 import filters from '../util/filters.js';
 import validators from '../util/validators.js';
+
+const now = new Date();
 
 export default {
 	name: 'DiscordMessage',
@@ -47,7 +54,7 @@ export default {
 		roleColor: String,
 		timestamp: {
 			type: [Date, String],
-			'default': () => new Date(),
+			'default': () => now,
 			validator: validators.dates.validator,
 		},
 		user: String,
@@ -153,6 +160,16 @@ export default {
 
 .discord-message .discord-message-body {
 	position: relative;
+}
+
+.discord-light-theme .discord-message .discord-message-timestamp,
+.discord-compact-mode .discord-message:hover .discord-message-timestamp,
+.discord-compact-mode.discord-light-theme .discord-message:hover .discord-message-timestamp {
+	color: #99aab5;
+}
+
+.discord-compact-mode.discord-light-theme .discord-message .discord-message-timestamp {
+	color: #d1d9de;
 }
 
 .discord-compact-mode .discord-message {
