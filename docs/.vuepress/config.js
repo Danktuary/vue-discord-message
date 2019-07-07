@@ -3,6 +3,7 @@ module.exports = {
 	themeConfig: {
 		nav: [
 			{ text: 'Home', link: '/' },
+			{ text: 'Plugin Options', link: '/plugin-options.html' },
 		],
 		sidebar: [
 			{
@@ -10,6 +11,7 @@ module.exports = {
 				children: [
 					'/',
 					['/installation-and-usage.html', 'Installation & Usage'],
+					'/plugin-options.html',
 				],
 				collapsable: false,
 			},
