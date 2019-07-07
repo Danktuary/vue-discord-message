@@ -24,7 +24,7 @@
 					<div class="discord-embed-description">
 						<slot></slot>
 					</div>
-					<slot name="discord-fields"></slot>
+					<slot name="fields"></slot>
 					<img v-if="image" :src="image" class="discord-embed-image" alt="" />
 				</div>
 				<img v-if="thumbnail" :src="thumbnail" alt="" class="discord-embed-thumbnail" />
