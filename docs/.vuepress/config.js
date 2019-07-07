@@ -9,6 +9,7 @@ module.exports = {
 				title: 'Package',
 				children: [
 					'/',
+					['/installation-and-usage.html', 'Installation & Usage'],
 				],
 				collapsable: false,
 			},
