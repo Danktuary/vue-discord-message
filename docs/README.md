@@ -3,7 +3,6 @@ home: true
 tagline: Vue components to easily build and display fake Discord messages on your webpages.
 actionText: yarn add vue-discord-message
 actionLink: /installation-and-usage.md
-footer: MIT Licensed | Copyright © 2018-present Sanctuary
 ---
 
 ## Preview
@@ -18,7 +17,7 @@ footer: MIT Licensed | Copyright © 2018-present Sanctuary
 	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
 	</discord-message>
-	<discord-message author="Twelve" avatar="https://i.imgur.com/Mc0F0Hf.png" role-color="#15b153">
+	<discord-message user="twelve">
 		Hello everyone! How's it going?
 	</discord-message>
 	<discord-message author="User">
@@ -27,7 +26,7 @@ footer: MIT Licensed | Copyright © 2018-present Sanctuary
 	<discord-message author="Yotsuba" avatar="https://i.imgur.com/amw0MGJ.png">
 		I'm doing well, <mention>Twelve</mention>. What about yourself?
 	</discord-message>
-	<discord-message author="Twelve" avatar="https://i.imgur.com/Mc0F0Hf.png" role-color="#15b153">
+	<discord-message user="twelve">
 		!8ball How am I doing today?
 	</discord-message>
 	<discord-message :bot="true" author="Rinon" avatar="https://i.imgur.com/axQ9wJl.png" role-color="violet">
@@ -35,7 +34,7 @@ footer: MIT Licensed | Copyright © 2018-present Sanctuary
 	</discord-message>
 </div>
 
-```vue
+```html
 <discord-messages>
 	<discord-message>
 		Hey guys, I'm new here! Glad to be able to join you all!
@@ -46,7 +45,7 @@ footer: MIT Licensed | Copyright © 2018-present Sanctuary
 	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
 	</discord-message>
-	<discord-message author="Twelve" avatar="https://i.imgur.com/Mc0F0Hf.png" role-color="#15b153">
+	<discord-message user="twelve">
 		Hello everyone! How's it going?
 	</discord-message>
 	<discord-message author="User">
@@ -55,7 +54,7 @@ footer: MIT Licensed | Copyright © 2018-present Sanctuary
 	<discord-message author="Yotsuba" avatar="https://i.imgur.com/amw0MGJ.png">
 		I'm doing well, <mention>Twelve</mention>. What about yourself?
 	</discord-message>
-	<discord-message author="Twelve" avatar="https://i.imgur.com/Mc0F0Hf.png" role-color="#15b153">
+	<discord-message user="twelve">
 		!8ball How am I doing today?
 	</discord-message>
 	<discord-message :bot="true" author="Rinon" avatar="https://i.imgur.com/axQ9wJl.png" role-color="violet">
@@ -78,4 +77,3 @@ footer: MIT Licensed | Copyright © 2018-present Sanctuary
 * Set mention colors (only used for role pings)
 * Complete embed support
 * Simple syntax!
-

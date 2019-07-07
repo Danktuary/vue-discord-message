@@ -12,7 +12,6 @@ yarn add vue-discord-message
 And then register it as a Vue plugin.
 
 ```js
-// index.js
 import Vue from 'vue';
 import VueDiscordMessage from 'vue-discord-message';
 
