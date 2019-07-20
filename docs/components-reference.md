@@ -96,7 +96,7 @@ A mention that can be used within messages. The default slot is used for the men
 | type | String | ✅ | `'user'` | The type of mention this should be. This will prepend the proper prefix character. Valid values: `user`, `channel`, `role` |
 
 <div is="discord-messages">
-	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+	<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server! Be sure to read through the <mention type="channel">rules</mention>. You can ping <mention type="role" color="#70f0b4">Support</mention> if you need help.
 	</discord-message>
 	<discord-message>
@@ -105,7 +105,7 @@ A mention that can be used within messages. The default slot is used for the men
 </div>
 
 ```html
-<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 	Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server! Be sure to read through the <mention type="channel">rules</mention>. You can ping <mention type="role" color="#70f0b4">Support</mention> if you need help.
 </discord-message>
 <discord-message>

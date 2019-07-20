@@ -13,7 +13,7 @@ sidebar: auto
 	<discord-message author="Dawn" avatar="red">
 		Hi, I'm new here too!
 	</discord-message>
-	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+	<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
 	</discord-message>
 	<discord-message user="twelve">
@@ -41,7 +41,7 @@ sidebar: auto
 	<discord-message author="Dawn" avatar="red">
 		Hi, I'm new here too!
 	</discord-message>
-	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+	<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
 	</discord-message>
 	<discord-message user="twelve">
@@ -109,7 +109,7 @@ Vue.use(VueDiscordMessage, {
 ## Mentions
 
 <div is="discord-messages">
-	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+	<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server! Be sure to read through the <mention type="channel">rules</mention>. You can ping <mention type="role" color="#70f0b4">Support</mention> if you need help.
 	</discord-message>
 	<discord-message>
@@ -118,7 +118,7 @@ Vue.use(VueDiscordMessage, {
 </div>
 
 ```html
-<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 	Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server! Be sure to read through the <mention type="channel">rules</mention>. You can ping <mention type="role" color="#70f0b4">Support</mention> if you need help.
 </discord-message>
 <discord-message>

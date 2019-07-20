@@ -45,7 +45,7 @@ The syntax is kept fairly simple. Here's a basic example of a regular conversati
 	<discord-message author="Dawn" avatar="red">
 		Hi, I'm new here too!
 	</discord-message>
-	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+	<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
 	</discord-message>
 </discord-messages>

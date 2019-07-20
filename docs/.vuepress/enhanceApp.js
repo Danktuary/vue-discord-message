@@ -5,7 +5,7 @@ export default ({ Vue }) => {
 		profiles: {
 			sanc: {
 				author: 'Sanctuary',
-				avatar: 'https://i.imgur.com/FPWMhCa.png',
+				avatar: 'https://i.imgur.com/0TeacfY.png',
 			},
 			rinon: {
 				author: 'Rinon',

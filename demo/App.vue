@@ -6,7 +6,7 @@
 		<discord-message author="Dawn" avatar="red">
 			Hi, I'm new here too!
 		</discord-message>
-		<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+		<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 			Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
 		</discord-message>
 		<discord-message author="Twelve" avatar="https://i.imgur.com/Mc0F0Hf.png" role-color="#15b153">
