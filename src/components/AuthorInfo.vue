@@ -56,6 +56,11 @@ export default {
 	flex-direction: row-reverse;
 }
 
+.discord-compact-mode .discord-message .discord-author-info .discord-author-username {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
 .discord-compact-mode .discord-message .discord-author-info .discord-bot-tag {
 	margin-left: 0;
 	margin-right: 5px;
