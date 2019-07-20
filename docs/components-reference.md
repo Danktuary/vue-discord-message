@@ -25,13 +25,29 @@ To keep things short and avoid being repetitive, the `<discord-messages>` wrappe
 	<discord-message>Look at me I'm a beautiful butterfly</discord-message>
 	<discord-message>Fluttering in the sunlight 🌞</discord-message>
 </div>
-<br />
+
+```html
+<discord-messages :light-theme="true">
+	<discord-message>Look at me I'm a beautiful butterfly</discord-message>
+	<discord-message>Fluttering in the sunlight 🌞</discord-message>
+</discord-messages>
+```
+
 <div is="discord-messages" :compact-mode="true">
 	<discord-message>Look at me I'm a beautiful butterfly</discord-message>
 	<discord-message>Fluttering in the moonlight 🌝</discord-message>
 	<discord-message>Waiting for the day when</discord-message>
 	<discord-message>Compact mode would be turned on</discord-message>
 </div>
+
+```html
+<discord-messages :compact-mode="true">
+	<discord-message>Look at me I'm a beautiful butterfly</discord-message>
+	<discord-message>Fluttering in the moonlight 🌝</discord-message>
+	<discord-message>Waiting for the day when</discord-message>
+	<discord-message>Compact mode would be turned on</discord-message>
+</discord-messages>
+```
 
 ## DiscordMessage
 
