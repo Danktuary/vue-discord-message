@@ -53,15 +53,6 @@ To keep things short and avoid being repetitive, the `<discord-messages>` wrappe
 
 A Discord message component. The default slot is used for the message's content.
 
-```html
-<discord-message>
-	Hey guys, I'm new here! Glad to be able to join you all!
-</discord-message>
-<discord-message author="Dawn" avatar="red">
-	Hi, I'm new here too!
-</discord-message>
-```
-
 <div is="discord-messages">
 	<discord-message>
 		Hey guys, I'm new here! Glad to be able to join you all!
@@ -70,6 +61,15 @@ A Discord message component. The default slot is used for the message's content.
 		Hi, I'm new here too!
 	</discord-message>
 </div>
+
+```html
+<discord-message>
+	Hey guys, I'm new here! Glad to be able to join you all!
+</discord-message>
+<discord-message author="Dawn" avatar="red">
+	Hi, I'm new here too!
+</discord-message>
+```
 
 ### Properties
 
@@ -95,15 +95,6 @@ A mention that can be used within messages. The default slot is used for the men
 | color | String | ✅ | | The color to use for this mention. Only works for role mentions and must be in hex format. |
 | type | String | ✅ | `'user'` | The type of mention this should be. This will prepend the proper prefix character. Valid values: `user`, `channel`, `role` |
 
-```html
-<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
-	Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server! Be sure to read through the <mention type="channel">rules</mention>. You can ping <mention type="role" color="#70f0b4">Support</mention> if you need help.
-</discord-message>
-<discord-message>
-	Hey there <mention :highlight="true">Sanctuary</mention>, thanks! I will!
-</discord-message>
-```
-
 <div is="discord-messages">
 	<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server! Be sure to read through the <mention type="channel">rules</mention>. You can ping <mention type="role" color="#70f0b4">Support</mention> if you need help.
@@ -112,6 +103,15 @@ A mention that can be used within messages. The default slot is used for the men
 		Hey there <mention :highlight="true">Sanctuary</mention>, thanks! I will!
 	</discord-message>
 </div>
+
+```html
+<discord-message author="Sanctuary" avatar="https://i.imgur.com/FPWMhCa.png" role-color="#0099ff">
+	Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server! Be sure to read through the <mention type="channel">rules</mention>. You can ping <mention type="role" color="#70f0b4">Support</mention> if you need help.
+</discord-message>
+<discord-message>
+	Hey there <mention :highlight="true">Sanctuary</mention>, thanks! I will!
+</discord-message>
+```
 
 ## DiscordEmbed
 
@@ -136,15 +136,6 @@ An embed that can be attached to the end of your messages. The default slot is u
 
 To ensure the embed gets displayed correctly inside your message, be sure to give it the proper `slot` attribute.
 
-```vue
-<discord-message>
-	Hi, I'm part of the normal message content.
-	<discord-embed slot="embeds" color="#0099ff">
-		Hi, I'm part of the embed message content.
-	</discord-embed>
-</discord-message>
-```
-
 <div is="discord-messages">
 	<discord-message>
 		Hi, I'm part of the normal message content.
@@ -153,6 +144,15 @@ To ensure the embed gets displayed correctly inside your message, be sure to giv
 		</discord-embed>
 	</discord-message>
 </div>
+
+```vue
+<discord-message>
+	Hi, I'm part of the normal message content.
+	<discord-embed slot="embeds" color="#0099ff">
+		Hi, I'm part of the embed message content.
+	</discord-embed>
+</discord-message>
+```
 
 ## EmbedFields
 
@@ -186,20 +186,6 @@ An embed field component.
 
 At least 2 consecutive fields need to be marked as inline in order for them to actually display next to each other. The maximum amount of inline fields is 3, and drops to 2 if an embed thumbnail is used.
 
-```vue
-<discord-embed slot="embeds">
-	Hi, I'm part of the embed message content.
-	<embed-fields slot="fields">
-		<embed-field :inline="true" title="Inline field">
-			Field content.
-		</embed-field>
-		<embed-field :inline="true" title="Inline field">
-			Field content.
-		</embed-field>
-	</embed-fields>
-</discord-embed>
-```
-
 <div is="discord-messages">
 	<discord-message>
 		<discord-embed slot="embeds">
@@ -215,3 +201,17 @@ At least 2 consecutive fields need to be marked as inline in order for them to a
 		</discord-embed>
 	</discord-message>
 </div>
+
+```vue
+<discord-embed slot="embeds">
+	Hi, I'm part of the embed message content.
+	<embed-fields slot="fields">
+		<embed-field :inline="true" title="Inline field">
+			Field content.
+		</embed-field>
+		<embed-field :inline="true" title="Inline field">
+			Field content.
+		</embed-field>
+	</embed-fields>
+</discord-embed>
+```
