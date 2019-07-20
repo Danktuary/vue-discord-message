@@ -15,7 +15,7 @@ import VueDiscordMessage from 'vue-discord-message';
 Vue.use(VueDiscordMessage);
 ```
 
-![vue-discord-message preview](https://i.imgur.com/Yn62i0l.png)
+![vue-discord-message preview](https://i.imgur.com/mSJQeWD.png)
 
 ```vue
 <discord-messages>
