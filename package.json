@@ -18,7 +18,6 @@
   "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve --open demo",
     "build": "vue-cli-service build --target lib --name VueDiscordMessage ./src/index.js",
     "docs:serve": "vuepress dev docs --open",
     "docs:build": "vuepress build docs",
