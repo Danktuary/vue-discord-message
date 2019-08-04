@@ -22,6 +22,8 @@ export default {
 		Vue.prototype.$discordMessage = {
 			avatars: Object.assign(avatars, discordAvatars),
 			profiles,
+			defaultTheme: options.defaultTheme,
+			defaultMode: options.defaultMode,
 		};
 
 		if (!options.disableFont) require('./css/fonts.css');

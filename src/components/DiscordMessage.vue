@@ -68,7 +68,7 @@ export default {
 
 	computed: {
 		compactMode() {
-			return this.$parent.$props.compactMode;
+			return this.$parent.layout['discord-compact-mode'];
 		},
 
 		profile() {

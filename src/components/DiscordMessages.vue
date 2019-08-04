@@ -13,13 +13,17 @@ export default {
 		compactMode: Boolean,
 	},
 
-	data() {
-		return {
-			layout: {
-				'discord-light-theme': this.lightTheme,
-				'discord-compact-mode': this.compactMode,
-			},
-		};
+	computed: {
+		layout() {
+			const options = this.$root.$discordMessage;
+			const lightTheme = this.lightTheme || options.defaultTheme === 'light';
+			const compactMode = this.compactMode || options.defaultMode === 'compact';
+
+			return {
+				'discord-light-theme': lightTheme,
+				'discord-compact-mode': compactMode,
+			};
+		},
 	},
 };
 </script>

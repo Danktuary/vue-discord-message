@@ -20,6 +20,26 @@ Vue.use(VueDiscordMessage, {
 }
 ```
 
+## Default theme
+
+If you want to use the light theme as the default for all your `<discord-messages>` elements, you can set the `defaultTheme` option.
+
+```js
+Vue.use(VueDiscordMessage, {
+	defaultTheme: 'light', // anything else will be rendered as `'dark'`
+});
+```
+
+## Default mode
+
+If you want to set compact mode as the default for all your `<discord-messages>` elements, you can set the `defaultMode` option.
+
+```js
+Vue.use(VueDiscordMessage, {
+	defaultMode: 'compact', // anything else will be rendered as `'cozy'`
+});
+```
+
 ## Avatar shortcuts
 
 The current avatar shortcut strings available are "blue", "gray", "green", "orange", and "red". If you want to add your own shortcuts, you can use the 2nd parameter in the `Vue.use()` call.
