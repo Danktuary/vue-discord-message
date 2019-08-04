@@ -139,10 +139,12 @@ export default {
 }
 
 .discord-embed .discord-embed-thumbnail {
-	width: 80px;
-	height: 80px;
+	max-width: 80px;
+	max-height: 80px;
 	margin-left: 1em;
 	border-radius: 3px;
+	object-fit: contain;
+	object-position: top-center;
 }
 
 .discord-embed .discord-embed-author {
