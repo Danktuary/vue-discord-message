@@ -68,7 +68,7 @@ Vue.use(VueDiscordMessage, {
 
 And then in your Vue templates:
 
-```vue
+```html
 <discord-messages>
 	<discord-message user="rinon">
 		Welcome to our server, <mention>Sanctuary</mention>!

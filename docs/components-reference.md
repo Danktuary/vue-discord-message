@@ -145,7 +145,7 @@ To ensure the embed gets displayed correctly inside your message, be sure to giv
 	</discord-message>
 </div>
 
-```vue
+```html
 <discord-message>
 	Hi, I'm part of the normal message content.
 	<discord-embed slot="embeds" color="#0099ff">
@@ -162,7 +162,7 @@ A wrapper for any child `<embed-field>` components. Must be used in order for fi
 
 To ensure the embed fields gets displayed correctly inside your embed, be sure to give it the proper `slot` attribute.
 
-```vue
+```html
 <discord-embed slot="embeds">
 	Hi, I'm part of the embed message content.
 	<embed-fields slot="fields">
@@ -202,7 +202,7 @@ At least 2 consecutive fields need to be marked as inline in order for them to a
 	</discord-message>
 </div>
 
-```vue
+```html
 <discord-embed slot="embeds">
 	Hi, I'm part of the embed message content.
 	<embed-fields slot="fields">

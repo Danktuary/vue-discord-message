@@ -17,7 +17,7 @@ Vue.use(VueDiscordMessage);
 
 ![vue-discord-message preview](https://i.imgur.com/mSJQeWD.png)
 
-```vue
+```html
 <discord-messages>
 	<discord-message>
 		Hey guys, I'm new here! Glad to be able to join you all!
