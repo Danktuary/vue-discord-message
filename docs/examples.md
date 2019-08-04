@@ -98,7 +98,7 @@ Vue.use(VueDiscordMessage, {
 </div>
 
 ```html
-<div is="discord-messages" :compact-mode="true">
+<discord-messages :compact-mode="true">
 	<discord-message>Look at me I'm a beautiful butterfly</discord-message>
 	<discord-message>Fluttering in the moonlight 🌝</discord-message>
 	<discord-message>Waiting for the day when</discord-message>
