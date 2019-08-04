@@ -69,7 +69,6 @@ export default {
 	background-color: rgba(114, 137, 218, 0.1);
 	font-weight: 500;
 	padding: 0 1px;
-	cursor: pointer;
 }
 
 .discord-message .discord-mention:hover {
