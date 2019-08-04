@@ -20,6 +20,8 @@ module.exports = {
 				collapsable: false,
 			},
 		],
+		repo: 'danktuary/vue-discord-message',
+		docsDir: 'docs',
 		sidebarDepth: 3,
 		editLinks: true,
 		lastUpdated: true,
