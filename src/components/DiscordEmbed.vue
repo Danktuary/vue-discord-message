@@ -144,7 +144,7 @@ export default {
 	margin-left: 1em;
 	border-radius: 3px;
 	object-fit: contain;
-	object-position: top-center;
+	object-position: top center;
 }
 
 .discord-embed .discord-embed-author {
