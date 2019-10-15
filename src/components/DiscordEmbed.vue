@@ -171,7 +171,8 @@ export default {
 	margin-right: 8px;
 	border-radius: 50%;
 }
-.discord-embed .discord-embed-title {
+
+.discord-embed .discord-embed-title a {
 	color: #fff;
 	font-weight: 500;
 }
