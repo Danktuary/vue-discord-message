@@ -26,4 +26,7 @@ module.exports = {
 		editLinks: true,
 		lastUpdated: true,
 	},
+	plugins: [
+		['@dovyp/vuepress-plugin-clipboard-copy', true]
+	]
 };
