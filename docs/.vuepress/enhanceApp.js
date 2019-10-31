@@ -13,6 +13,11 @@ export default ({ Vue }) => {
 				bot: true,
 				roleColor: '#ee82ee',
 			},
+			twelve: {
+				author: 'Twelve',
+				avatar: 'https://i.imgur.com/Mc0F0Hf.png',
+				roleColor: '#15b153',
+			},
 		},
 	});
 };
