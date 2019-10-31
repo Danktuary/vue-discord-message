@@ -28,6 +28,7 @@
     "hex-to-rgba": "^1.0.1"
   },
   "devDependencies": {
+    "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
     "@vue/cli-plugin-babel": "^3.0.1",
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
@@ -37,6 +38,6 @@
     "eslint-plugin-vue": "^4.7.1",
     "vue": "^2.5.16",
     "vue-template-compiler": "^2.5.16",
-    "vuepress": "^1.0.2"
+    "vuepress": "^1.2.0"
   }
 }
