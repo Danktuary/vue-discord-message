@@ -14,6 +14,6 @@ export default {
 .discord-embed .discord-embed-fields {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 5px;
+	margin-top: 8px;
 }
 </style>

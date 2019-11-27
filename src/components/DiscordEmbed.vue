@@ -96,7 +96,7 @@ export default {
 
 <style>
 .discord-embed {
-	color: rgba(255, 255, 255, 0.6);
+	color: #dcddde;
 	display: flex;
 	margin-top: 8px;
 	margin-bottom: 8px;
@@ -105,28 +105,28 @@ export default {
 }
 
 .discord-light-theme .discord-embed {
-	color: rgba(79, 83, 91, 0.9);
+	color: #2e3338;
 }
 
 .discord-embed .discord-left-border {
-	background-color: #4f545c;
+	background-color: #202225;
 	flex-shrink: 0;
 	width: 4px;
-	border-radius: 3px 0 0 3px;
+	border-radius: 4px 0 0 4px;
 }
 
 .discord-light-theme .discord-embed .discord-left-border {
-	background-color: #cacbce;
+	background-color: #e3e5e8;
 }
 
 .discord-embed .discord-embed-container {
-	background-color: rgba(46, 48, 54, 0.3);
+	background-color: #2f3136;
 	display: flex;
 	flex-direction: column;
 	max-width: 520px;
-	padding: 8px 10px;
+	padding: 8px 16px 16px;
 	border: 1px solid rgba(46, 48, 54, 0.6);
-	border-radius: 0 3px 3px 0;
+	border-radius: 0 4px 4px 0;
 }
 
 .discord-light-theme .discord-embed .discord-embed-container {
@@ -141,8 +141,9 @@ export default {
 .discord-embed .discord-embed-thumbnail {
 	max-width: 80px;
 	max-height: 80px;
-	margin-left: 1em;
-	border-radius: 3px;
+	margin-left: 16px;
+	margin-top: 8px;
+	border-radius: 4px;
 	object-fit: contain;
 	object-position: top center;
 }
@@ -150,7 +151,9 @@ export default {
 .discord-embed .discord-embed-author {
 	color: #fff;
 	display: flex;
+	align-items: center;
 	font-weight: 500;
+	margin-top: 8px;
 }
 
 .discord-light-theme .discord-embed .discord-embed-author {
@@ -166,24 +169,36 @@ export default {
 }
 
 .discord-embed .discord-embed-author .discord-author-image {
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 	margin-right: 8px;
 	border-radius: 50%;
 }
 
-.discord-embed .discord-embed-title a {
+.discord-embed .discord-embed-title {
 	color: #fff;
-	font-weight: 500;
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 8px;
+}
+
+.discord-embed .discord-embed-title a {
+	color: #00b0f4;
+	font-weight: 600;
+}
+
+.discord-embed .discord-embed-description {
+	margin-top: 8px;
 }
 
 .discord-embed .discord-embed-image {
 	max-width: 100%;
-	margin-top: 8px;
-	border-radius: 3px;
+	margin-top: 16px;
+	border-radius: 4px;
 }
 
 .discord-embed .discord-embed-footer {
+	color: #72767d;
 	display: flex;
 	align-items: center;
 	font-size: 0.85em;
@@ -199,8 +214,12 @@ export default {
 }
 
 .discord-embed .discord-embed-footer .discord-footer-separator {
-	color: #4f545c;
+	color: #3b3c42;
 	font-weight: 700;
-	margin: 0 5px;
+	margin: 0 4px;
+}
+
+.discord-light-theme .discord-embed .discord-embed-footer .discord-footer-separator {
+	color: #e4e4e4;
 }
 </style>

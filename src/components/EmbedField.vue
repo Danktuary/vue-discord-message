@@ -32,12 +32,12 @@ export default {
 }
 
 .discord-embed .discord-embed-field .discord-field-title {
-	color: #fff;
+	color: #72767d;
 	font-weight: 500;
-	margin-bottom: 5px;
+	margin-bottom: 2px;
 }
 
 .discord-light-theme .discord-embed .discord-embed-field .discord-field-title {
-	color: rgba(79, 83, 91, 0.9);
+	color: #747f8d;
 }
 </style>
