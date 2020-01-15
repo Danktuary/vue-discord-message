@@ -8,7 +8,6 @@
 <script>
 export default {
 	name: 'EmbedField',
-
 	props: {
 		title: {
 			type: String,

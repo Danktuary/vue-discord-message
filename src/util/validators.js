@@ -10,6 +10,4 @@ export const dates = {
 	},
 };
 
-export default {
-	dates,
-};
+export default { dates };

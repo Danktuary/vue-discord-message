@@ -12,7 +12,6 @@
 <script>
 export default {
 	name: 'AuthorInfo',
-
 	props: {
 		bot: Boolean,
 		roleColor: String,

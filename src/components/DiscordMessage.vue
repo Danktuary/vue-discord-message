@@ -38,11 +38,8 @@ const now = new Date();
 
 export default {
 	name: 'DiscordMessage',
-
 	components: { AuthorInfo },
-
 	filters: filters.dates,
-
 	props: {
 		author: {
 			type: String,
@@ -59,18 +56,15 @@ export default {
 		},
 		user: String,
 	},
-
 	data() {
 		return {
 			highlightMention: false,
 		};
 	},
-
 	computed: {
 		compactMode() {
 			return this.$parent.layout['discord-compact-mode'];
 		},
-
 		profile() {
 			const discord = this.$root.$discordMessage;
 			const resolveAvatar = avatar => discord.avatars[avatar] || avatar || discord.avatars.default;
@@ -86,7 +80,6 @@ export default {
 			return Object.assign(defaults, profile);
 		},
 	},
-
 	mounted() {
 		this.highlightMention = this.$children.some(child => {
 			return child.$options.name === 'Mention' && child.$props.highlight && child.$props.type !== 'channel';

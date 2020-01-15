@@ -7,12 +7,10 @@
 <script>
 export default {
 	name: 'DiscordMessages',
-
 	props: {
 		lightTheme: Boolean,
 		compactMode: Boolean,
 	},
-
 	computed: {
 		layout() {
 			const options = this.$root.$discordMessage;

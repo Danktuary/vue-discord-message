@@ -9,7 +9,6 @@ import hexToRgba from 'hex-to-rgba';
 
 export default {
 	name: 'Mention',
-
 	props: {
 		highlight: Boolean,
 		color: String,
@@ -21,12 +20,10 @@ export default {
 			},
 		},
 	},
-
 	computed: {
 		mentionCharacter() {
 			return this.type === 'channel' ? '#' : '@';
 		},
-
 		colorStyle() {
 			if (!this.color || this.type !== 'role') return {};
 
@@ -36,26 +33,22 @@ export default {
 			};
 		},
 	},
-
 	mounted() {
 		if (this.color && this.type === 'role') {
 			this.$el.addEventListener('mouseover', this.setHoverColor);
 			this.$el.addEventListener('mouseout', this.resetHoverColor);
 		}
 	},
-
 	beforeDestroy() {
 		if (this.color && this.type === 'role') {
 			this.$el.removeEventListener('mouseover', this.setHoverColor);
 			this.$el.removeEventListener('mouseout', this.resetHoverColor);
 		}
 	},
-
 	methods: {
 		setHoverColor() {
 			this.$el.style.backgroundColor = hexToRgba(this.color, 0.3);
 		},
-
 		resetHoverColor() {
 			this.$el.style.backgroundColor = hexToRgba(this.color, 0.1);
 		},

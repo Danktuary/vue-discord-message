@@ -51,9 +51,7 @@ import validators from '../util/validators.js';
 
 export default {
 	name: 'DiscordEmbed',
-
 	filters: filters.dates,
-
 	props: {
 		color: String,
 		authorName: String,
@@ -69,7 +67,6 @@ export default {
 			validator: validators.dates.validator,
 		},
 	},
-
 	computed: {
 		author() {
 			return {
@@ -78,15 +75,12 @@ export default {
 				url: this.authorUrl,
 			};
 		},
-
 		showFooter() {
 			return this.$slots.footer || this.timestamp;
 		},
-
 		showFooterImage() {
 			return this.$slots.footer && this.footerImage;
 		},
-
 		showFooterSeparator() {
 			return this.$slots.footer && this.timestamp;
 		},
