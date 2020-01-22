@@ -72,3 +72,7 @@ actionLink: /installation-and-usage.md
 * Display fake user, role, and channel mentions
 * Complete embed support
 * Simple syntax!
+
+## Related
+
+If you want to use web components instead, use [wc-discord-message](https://github.com/Danktuary/wc-discord-message)!

@@ -2,6 +2,8 @@
 
 Vue components to easily build and display fake Discord messages on your webpages.
 
+If you want to use web components instead, use [wc-discord-message](https://github.com/Danktuary/wc-discord-message)!
+
 ```sh
 yarn add vue-discord-message
 # or npm install vue-discord-messgae
