@@ -93,6 +93,7 @@ A mention that can be used within messages. The default slot is used for the men
 | --- | --- | --- | --- | --- |
 | highlight | Boolean | ✅ | `false` | Whether this entire message block should be highlighted (to emulate the "logged in user" being pinged). |
 | color | String | ✅ | | The color to use for this mention. Only works for role mentions and must be in hex format. |
+| profile | String | ✅ | | The ID of the [profile](/plugin-options.html#profile-shortcuts) you want to assign to this message. This will either use the profile's `author` property to set the default slot content (if empty) , or use the profile's `roleColor` property to set the color for role pings. |
 | type | String | ✅ | `'user'` | The type of mention this should be. This will prepend the proper prefix character. Valid values: `user`, `channel`, `role` |
 
 <div is="discord-messages">

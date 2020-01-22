@@ -1,6 +1,6 @@
 <template>
 	<span :style="colorStyle" class="discord-mention">
-		{{ mentionCharacter }}<slot></slot>
+		{{ mentionCharacter }}<slot>{{ defaultContent }}</slot>
 	</span>
 </template>
 
@@ -19,38 +19,50 @@ export default {
 				return ['user', 'channel', 'role'].includes(value);
 			},
 		},
+		profile: String,
 	},
 	computed: {
+		defaultContent() {
+			const { type, profile } = this;
+			const user = this.$root.$discordMessage.profiles[profile] || {};
+			return type === 'user' && user.author
+				? user.author
+				: (type === 'channel' ? type : type.charAt(0).toUpperCase() + type.slice(1));
+		},
 		mentionCharacter() {
 			return this.type === 'channel' ? '#' : '@';
 		},
+		roleColor() {
+			const profile = this.$root.$discordMessage.profiles[this.profile] || {};
+			return profile.roleColor || this.color;
+		},
 		colorStyle() {
-			if (!this.color || this.type !== 'role') return {};
+			if (!this.roleColor || this.type !== 'role') return {};
 
 			return {
-				color: this.color,
-				'background-color': hexToRgba(this.color, 0.1),
+				color: this.roleColor,
+				'background-color': hexToRgba(this.roleColor, 0.1),
 			};
 		},
 	},
 	mounted() {
-		if (this.color && this.type === 'role') {
+		if (this.roleColor && this.type === 'role') {
 			this.$el.addEventListener('mouseover', this.setHoverColor);
 			this.$el.addEventListener('mouseout', this.resetHoverColor);
 		}
 	},
 	beforeDestroy() {
-		if (this.color && this.type === 'role') {
+		if (this.roleColor && this.type === 'role') {
 			this.$el.removeEventListener('mouseover', this.setHoverColor);
 			this.$el.removeEventListener('mouseout', this.resetHoverColor);
 		}
 	},
 	methods: {
 		setHoverColor() {
-			this.$el.style.backgroundColor = hexToRgba(this.color, 0.3);
+			this.$el.style.backgroundColor = hexToRgba(this.roleColor, 0.3);
 		},
 		resetHoverColor() {
-			this.$el.style.backgroundColor = hexToRgba(this.color, 0.1);
+			this.$el.style.backgroundColor = hexToRgba(this.roleColor, 0.1);
 		},
 	},
 };
