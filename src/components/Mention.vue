@@ -15,9 +15,7 @@ export default {
 		type: {
 			type: String,
 			'default': 'user',
-			validator(value) {
-				return ['user', 'channel', 'role'].includes(value);
-			},
+			validator: value => ['user', 'channel', 'role'].includes(value),
 		},
 		profile: String,
 	},
