@@ -61,3 +61,21 @@ Vue.use(VueDiscordMessage);
 ## Docs
 
 Check out the full documentation for full component usage and examples [here](https://vue-discord-message.netlify.com/).
+
+## Upgrading to v4
+
+In vue-discord-message v3, the [profile shortcuts plugin option](https://vue-discord-message.netlify.com/plugin-options.html#profile-shortcuts) is set via a `profiles` object property in your `Vue.use()` call, and then used as `<discord-message user="id">`. In v4, the `user` prop has been renamed to `profile`.
+
+The Mention component has also been updated to have default content for the default slot. If the default slot is left empty, the mention will be rendered as `'User'`, `'Role'`, or `'channel`', depending on the `type` prop given.
+It now accepts a `profile` prop as well. This will either use the profile's `author` property to set the default slot content (if empty) , or use the profile's `roleColor` property to set the color for role pings.
+
+
+```html
+<discord-messages>
+	<discord-message>Hey there, <mention />!</discord-message> <!-- "Hey there, @User! -->
+	<discord-message>Hey there, <mention profile="sanc" />!</discord-message> <!-- "Hey there, @Sanctuary! -->
+	<discord-message>Hey there, <mention profile="sanc" type="role" />!</discord-message> <!-- "Hey there, @Role! (colored ping) -->
+</discord-messages>
+```
+
+The Discord avatar shortcut images are also no longer bundled with this package and are [now served as CDN links](https://vue-discord-message.netlify.com/plugin-options.html#avatar-shortcuts). This allows for a much smaller package size! 🎉
