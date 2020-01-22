@@ -79,9 +79,9 @@ A Discord message component. The default slot is used for the message's content.
 | avatar | String | ✅ | `'blue'` | The message author's avatar. Can be a [shortcut string](/plugin-options.html#avatar-shortcuts), relative path, or external link.
 | bot | Boolean | ✅ | `false` | Whether the message author is a bot or not. |
 | edited | Boolean | ✅ | `false` | Whether the message has been edited or not. |
+| profile | String | ✅ | | The ID of the [profile](/plugin-options.html#profile-shortcuts) you want to assign to this message. |
 | role-color | String | ✅ | | The message author's primary role color. Can be any [CSS color value](https://www.w3schools.com/cssref/css_colors_legal.asp). |
 | timestamp | Date\|String | ✅ | `new Date()` | The timestamp to use for the message date. When supplying a string, the format must be `01/31/2000`. |
-| user | String | ✅ | | The ID of the [profile](/plugin-options.html#profile-shortcuts) you want to assign to this message. |
 
 ## Mention
 

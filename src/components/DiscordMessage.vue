@@ -1,12 +1,12 @@
 <template>
 	<div class="discord-message">
 		<div class="discord-author-avatar">
-			<img :src="profile.avatar" :alt="profile.author" />
+			<img :src="user.avatar" :alt="user.author" />
 		</div>
 		<div class="discord-message-content">
 			<div v-if="!compactMode">
-				<author-info :bot="profile.bot" :role-color="profile.roleColor">
-					{{ profile.author }}
+				<author-info :bot="user.bot" :role-color="user.roleColor">
+					{{ user.author }}
 				</author-info>
 				<span class="discord-message-timestamp">
 					{{ timestamp | formatDate | padZeroes }}
@@ -17,8 +17,8 @@
 					<span class="discord-message-timestamp">
 						{{ timestamp | formatDate | padZeroes }}
 					</span>
-					<author-info :bot="profile.bot" :role-color="profile.roleColor">
-						{{ profile.author }}
+					<author-info :bot="user.bot" :role-color="user.roleColor">
+						{{ user.author }}
 					</author-info>
 				</template>
 				<slot></slot>
@@ -54,7 +54,7 @@ export default {
 			'default': () => now,
 			validator: validators.dates.validator,
 		},
-		user: String,
+		profile: String,
 	},
 	data() {
 		return {
@@ -65,19 +65,14 @@ export default {
 		compactMode() {
 			return this.$parent.layout['discord-compact-mode'];
 		},
-		profile() {
-			const discord = this.$root.$discordMessage;
-			const resolveAvatar = avatar => discord.avatars[avatar] || avatar || discord.avatars.default;
-			const defaults = {
-				author: this.author,
-				bot: this.bot,
-				roleColor: this.roleColor,
-			};
+		user() {
+			const { $discordMessage } = this.$root;
+			const resolveAvatar = avatar => $discordMessage.avatars[avatar] || avatar || $discordMessage.avatars.default;
 
-			const profile = discord.profiles[this.user] || {};
-			profile.avatar = resolveAvatar(profile.avatar || this.avatar);
+			const profile = $discordMessage.profiles[this.profile] || {};
+			const props = { author: this.author, bot: this.bot, roleColor: this.roleColor };
 
-			return Object.assign(defaults, profile);
+			return Object.assign(profile, props, { avatar: resolveAvatar(this.avatar || profile.avatar) });
 		},
 	},
 	mounted() {

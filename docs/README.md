@@ -17,7 +17,7 @@ actionLink: /installation-and-usage.md
 	<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
 	</discord-message>
-	<discord-message user="twelve">
+	<discord-message profile="twelve">
 		Hello everyone! How's it going?
 	</discord-message>
 	<discord-message author="User">
@@ -26,7 +26,7 @@ actionLink: /installation-and-usage.md
 	<discord-message author="Yotsuba" avatar="https://i.imgur.com/amw0MGJ.png">
 		I'm doing well, <mention>Twelve</mention>. What about yourself?
 	</discord-message>
-	<discord-message user="twelve">
+	<discord-message profile="twelve">
 		!8ball How am I doing today?
 	</discord-message>
 	<discord-message :bot="true" author="Rinon" avatar="https://i.imgur.com/axQ9wJl.png" role-color="violet">
@@ -45,7 +45,7 @@ actionLink: /installation-and-usage.md
 	<discord-message author="Sanctuary" avatar="https://i.imgur.com/0TeacfY.png" role-color="#0099ff">
 		Hey, <mention>User</mention> and <mention>Dawn</mention>. Welcome to our server!
 	</discord-message>
-	<discord-message user="twelve">
+	<discord-message profile="twelve">
 		Hello everyone! How's it going?
 	</discord-message>
 	<discord-message author="User">
@@ -54,7 +54,7 @@ actionLink: /installation-and-usage.md
 	<discord-message author="Yotsuba" avatar="https://i.imgur.com/amw0MGJ.png">
 		I'm doing well, <mention>Twelve</mention>. What about yourself?
 	</discord-message>
-	<discord-message user="twelve">
+	<discord-message profile="twelve">
 		!8ball How am I doing today?
 	</discord-message>
 	<discord-message :bot="true" author="Rinon" avatar="https://i.imgur.com/axQ9wJl.png" role-color="violet">

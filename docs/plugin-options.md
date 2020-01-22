@@ -90,20 +90,21 @@ And then in your Vue templates:
 
 ```html
 <discord-messages>
-	<discord-message user="rinon">
+	<discord-message profile="rinon">
 		Welcome to our server, <mention>Sanctuary</mention>!
+		<!-- Alternatively: <mention profile="sanc" /> -->
 	</discord-message>
-	<discord-message user="sanc">
+	<discord-message profile="sanc">
 		Hey, glad to be here!
 	</discord-message>
 </discord-messages>
 ```
 
 <div is="discord-messages">
-	<discord-message user="rinon">
+	<discord-message profile="rinon">
 		Welcome to our server, <mention>Sanctuary</mention>!
 	</discord-message>
-	<discord-message user="sanc">
+	<discord-message profile="sanc">
 		Hey, glad to be here!
 	</discord-message>
 </div>
