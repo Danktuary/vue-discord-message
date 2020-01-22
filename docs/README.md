@@ -65,15 +65,10 @@ actionLink: /installation-and-usage.md
 
 ## Features
 
-* Design modeled after Discord itself
+* Design modeled after [Discord](https://discordapp.com/) itself
 * Comfy and compact mode support
 * Dark and light themes support
-* Set the message author's username
-* Set the message author's avatar (choose from the default avatars or provide your own)
-* Set the message author's role color
-* Display the "bot" tag on messages
+* Set the message author's username, avatar (use defaults or provide your own), role color, and "bot" tag status
 * Display fake user, role, and channel mentions
-* Highlight mentions (for when the "logged in user" is pinged)
-* Set mention colors (only used for role pings)
 * Complete embed support
 * Simple syntax!
