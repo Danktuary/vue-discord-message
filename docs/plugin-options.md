@@ -42,7 +42,19 @@ Vue.use(VueDiscordMessage, {
 
 ## Avatar shortcuts
 
-The current avatar shortcut strings available are "blue", "gray", "green", "orange", and "red". If you want to add your own shortcuts, you can use the 2nd parameter in the `Vue.use()` call.
+The current avatar shortcut strings available are "blue" (default), "gray", "green", "orange", and "red". These shortcuts map to the following image links:
+
+```json
+{
+	"blue": "https://cdn.discordapp.com/attachments/654503812593090602/665721745466195978/blue.png",
+	"gray": "https://cdn.discordapp.com/attachments/654503812593090602/665721746569166849/gray.png",
+	"green": "https://cdn.discordapp.com/attachments/654503812593090602/665721748431306753/green.png",
+	"orange": "https://cdn.discordapp.com/attachments/654503812593090602/665721750201434138/orange.png",
+	"red": "https://cdn.discordapp.com/attachments/654503812593090602/665721752277483540/red.png"
+}
+```
+
+If you want to add to or override the shortcuts, you can use the 2nd parameter in the `Vue.use()` call.
 
 ```js
 Vue.use(VueDiscordMessage, {

@@ -10,17 +10,17 @@ export default {
 		const { avatars = {}, componentNames = {}, profiles = {} } = options;
 
 		const discordAvatars = {
-			blue: require('./avatars/blue.png'),
-			gray: require('./avatars/gray.png'),
-			green: require('./avatars/green.png'),
-			orange: require('./avatars/orange.png'),
-			red: require('./avatars/red.png'),
+			blue: 'https://cdn.discordapp.com/attachments/654503812593090602/665721745466195978/blue.png',
+			gray: 'https://cdn.discordapp.com/attachments/654503812593090602/665721746569166849/gray.png',
+			green: 'https://cdn.discordapp.com/attachments/654503812593090602/665721748431306753/green.png',
+			orange: 'https://cdn.discordapp.com/attachments/654503812593090602/665721750201434138/orange.png',
+			red: 'https://cdn.discordapp.com/attachments/654503812593090602/665721752277483540/red.png',
 		};
 
-		discordAvatars.default = discordAvatars[avatars.default] || avatars.default || discordAvatars.blue;
-
 		Vue.prototype.$discordMessage = {
-			avatars: Object.assign(avatars, discordAvatars),
+			avatars: Object.assign(discordAvatars, avatars, {
+				'default': discordAvatars[avatars.default] || avatars.default || discordAvatars.blue,
+			}),
 			profiles,
 			defaultTheme: options.defaultTheme,
 			defaultMode: options.defaultMode,
