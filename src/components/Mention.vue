@@ -79,31 +79,31 @@ export default {
 	background-color: rgba(114, 137, 218, 0.7);
 }
 
-.discord-message .discord-message-body.discord-highlight-mention {
-	background-color: rgba(250, 166, 26, 0.1);
-	border-radius: 0 3px 3px 0;
-	margin-left: -3px;
-	padding-left: 3px;
-	padding-right: 5px;
+.discord-message.discord-highlight-mention {
+	background-color: rgba(250, 166, 26, 0.05);
+	position: relative;
 }
 
-.discord-message .discord-message-body.discord-message-body.discord-highlight-mention::before {
-	content: " ";
-	background-color: rgba(250, 166, 26, 0.2);
+.discord-message.discord-highlight-mention::before {
+	content: "";
+	background-color: #faa61a;
+	display: block;
 	position: absolute;
 	top: 0;
-	left: -6px;
+	left: 0;
 	bottom: 0;
 	width: 2px;
-	border-left: 4px solid #faa61a;
-	border-radius: 3px 0 0 3px;
 }
 
-.discord-message .discord-message-body.discord-highlight-mention .discord-mention {
+.discord-message.discord-highlight-mention:hover {
+	background-color: rgba(250, 166, 26, 0.1);
+}
+
+.discord-message.discord-highlight-mention .discord-mention {
 	background-color: unset !important;
 }
 
-.discord-message .discord-message-body.discord-highlight-mention .discord-mention:hover {
+.discord-message.discord-highlight-mention .discord-mention:hover {
 	color: #7289da;
 	text-decoration: underline;
 }

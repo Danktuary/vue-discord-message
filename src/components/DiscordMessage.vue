@@ -1,5 +1,5 @@
 <template>
-	<div class="discord-message">
+	<div :class="{ 'discord-highlight-mention': highlightMention }" class="discord-message">
 		<div class="discord-author-avatar">
 			<img :src="user.avatar" :alt="user.author" />
 		</div>
@@ -12,7 +12,7 @@
 					{{ timestamp | formatDate | padZeroes }}
 				</span>
 			</div>
-			<div :class="{ 'discord-highlight-mention': highlightMention }" class="discord-message-body">
+			<div class="discord-message-body">
 				<template v-if="compactMode">
 					<span class="discord-message-timestamp">
 						{{ timestamp | formatDate | padZeroes }}
