@@ -17,7 +17,7 @@ import VueDiscordMessage from 'vue-discord-message';
 Vue.use(VueDiscordMessage);
 ```
 
-![vue-discord-message preview](https://i.imgur.com/gRD45Fq.png)
+![vue-discord-message preview](https://i.imgur.com/XX0JUdt.png)
 
 ```html
 <discord-messages>
@@ -61,6 +61,10 @@ Vue.use(VueDiscordMessage);
 ## Docs
 
 Check out the full documentation for full component usage and examples [here](https://vue-discord-message.netlify.com/).
+
+## Upgrading to v5
+
+CSS updates and general fixes were applied. The only "breaking" change is that the `.discord-highlight-mention` class has been moved up from to `.discord-message.discord-message-body` to `.discord-message`, in case you're targetting it in your CSS somewhere.
 
 ## Upgrading to v4
 
