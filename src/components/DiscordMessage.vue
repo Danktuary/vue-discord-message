@@ -72,7 +72,7 @@ export default {
 			const profile = $discordMessage.profiles[this.profile] || {};
 			const props = { author: this.author, bot: this.bot, roleColor: this.roleColor };
 
-			return Object.assign(profile, props, { avatar: resolveAvatar(this.avatar || profile.avatar) });
+			return Object.assign(props, profile, { avatar: resolveAvatar(this.avatar || profile.avatar) });
 		},
 	},
 	mounted() {
