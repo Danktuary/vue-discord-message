@@ -212,13 +212,13 @@ Vue.use(VueDiscordMessage, {
 		<discord-embed slot="embeds">
 			<embed-fields slot="fields">
 				<embed-field title="Field title">
-					Some value here. Some value here. Some value here.
+					Some value here. Some value here. Some value here
 				</embed-field>
 				<embed-field title="Field title">
-					Some value here. Some value here. Some value here.
+					Some value here. Some value here. Some value here
 				</embed-field>
 				<embed-field title="Field title">
-					Some value here. Some value here. Some value here.
+					Some value here. Some value here. Some value here
 				</embed-field>
 			</embed-fields>
 		</discord-embed>
@@ -231,13 +231,13 @@ Vue.use(VueDiscordMessage, {
 		<discord-embed slot="embeds">
 			<embed-fields slot="fields">
 				<embed-field title="Field title">
-					Some value here. Some value here. Some value here.
+					Some value here. Some value here. Some value here
 				</embed-field>
 				<embed-field title="Field title">
-					Some value here. Some value here. Some value here.
+					Some value here. Some value here. Some value here
 				</embed-field>
 				<embed-field title="Field title">
-					Some value here. Some value here. Some value here.
+					Some value here. Some value here. Some value here
 				</embed-field>
 			</embed-fields>
 		</discord-embed>
@@ -252,13 +252,13 @@ Vue.use(VueDiscordMessage, {
 		<discord-embed slot="embeds">
 			<embed-fields slot="fields">
 				<embed-field title="Inline field title" :inline="true">
-					Some value here.
+					Some value here
 				</embed-field>
 				<embed-field title="Inline field title" :inline="true">
-					Some value here.
+					Some value here
 				</embed-field>
 				<embed-field title="Inline field title" :inline="true">
-					Some value here.
+					Some value here
 				</embed-field>
 			</embed-fields>
 		</discord-embed>
@@ -286,8 +286,6 @@ Vue.use(VueDiscordMessage, {
 ```
 
 ### Inline fields with a thumbnail
-
-The maximum amount of inline fields drops from 3 to 2 if an embed thumbnail is used.
 
 <div is="discord-messages">
 	<discord-message>
