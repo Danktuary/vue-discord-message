@@ -1,5 +1,5 @@
 <template>
-	<div class="discord-message">
+	<div :class="{ 'discord-highlight-mention': highlightMention }" class="discord-message">
 		<div class="discord-author-avatar">
 			<img :src="user.avatar" :alt="user.author" />
 		</div>
@@ -12,7 +12,7 @@
 					{{ timestamp | formatDate | padZeroes }}
 				</span>
 			</div>
-			<div :class="{ 'discord-highlight-mention': highlightMention }" class="discord-message-body">
+			<div class="discord-message-body">
 				<template v-if="compactMode">
 					<span class="discord-message-timestamp">
 						{{ timestamp | formatDate | padZeroes }}
@@ -87,16 +87,16 @@ export default {
 .discord-message {
 	display: flex;
 	font-size: 0.9em;
-	padding: 1em 0.5em;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	margin: 1em 0;
+	padding: 0.25em 1em 0;
 }
 
-.discord-light-theme .discord-message {
-	border-color: #eceeef;
+.discord-message:hover {
+	background-color: #32353b;
 }
 
-.discord-message:last-of-type {
-	border-bottom-width: 0;
+.discord-light-theme .discord-message:hover {
+	background-color: #fafafa;
 }
 
 .discord-message a {
@@ -161,8 +161,9 @@ export default {
 }
 
 .discord-compact-mode .discord-message {
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	margin: 0.15em 0;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
 }
 
 .discord-compact-mode .discord-author-avatar {
