@@ -85,6 +85,7 @@ export default {
 
 <style>
 .discord-message {
+	color: #dcddde;
 	display: flex;
 	font-size: 0.9em;
 	margin: 1em 0;
@@ -93,6 +94,10 @@ export default {
 
 .discord-message:hover {
 	background-color: #32353b;
+}
+
+.discord-light-theme .discord-message {
+	color: #2e3338;
 }
 
 .discord-light-theme .discord-message:hover {

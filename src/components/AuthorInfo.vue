@@ -21,6 +21,7 @@ export default {
 
 <style>
 .discord-message .discord-author-info {
+	color: #fff;
 	display: inline-flex;
 	align-items: center;
 	font-size: 15px;
