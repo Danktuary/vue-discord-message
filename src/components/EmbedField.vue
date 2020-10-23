@@ -27,7 +27,7 @@ export default {
 .discord-embed .discord-embed-field.discord-inline-field {
 	flex-grow: 1;
 	flex-basis: auto;
-	min-width: 150px;
+	min-width: 100px;
 }
 
 .discord-embed .discord-embed-field .discord-field-title {
