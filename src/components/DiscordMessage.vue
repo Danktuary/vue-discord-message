@@ -149,6 +149,7 @@ export default {
 	width: 100%;
 	line-height: 160%;
 	font-weight: normal;
+	overflow-wrap: anywhere;
 }
 
 .discord-message .discord-message-body {
