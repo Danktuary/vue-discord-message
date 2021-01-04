@@ -62,6 +62,22 @@ Vue.use(VueDiscordMessage);
 
 Check out the full documentation for full component usage and examples [here](https://vue-discord-message.netlify.com/).
 
+## Notes
+
+### Usage inside Markdown files
+
+If you're using a static site generator like [VuePress](https://vuepress.vuejs.org/) and want to use these components inside your Markdown files, you should use it as such:
+
+```html
+<div is="discord-messages">
+	<discord-message>
+		...
+	</discord-message>
+</div>
+```
+
+This is the recommended approach due to how VuePress renders Markdown and HTML inside Markdown files. It doesn't recognize `<discord-messages>` as an HTML element, therefore rendering anything indented inside it as a regular codeblock.
+
 ## Upgrading
 
 ### Upgrade to v5
