@@ -62,11 +62,13 @@ Vue.use(VueDiscordMessage);
 
 Check out the full documentation for full component usage and examples [here](https://vue-discord-message.netlify.com/).
 
-## Upgrading to v5
+## Upgrading
+
+### Upgrade to v5
 
 CSS updates and general fixes were applied. The only "breaking" change is that the `.discord-highlight-mention` class has been moved up from to `.discord-message.discord-message-body` to `.discord-message`, in case you're targetting it in your CSS somewhere.
 
-## Upgrading to v4
+### Upgrade to v4
 
 In vue-discord-message v3, the [profile shortcuts plugin option](https://vue-discord-message.netlify.com/plugin-options.html#profile-shortcuts) is set via a `profiles` object property in your `Vue.use()` call, and then used as `<discord-message user="id">`. In v4, the `user` prop has been renamed to `profile`.
 
