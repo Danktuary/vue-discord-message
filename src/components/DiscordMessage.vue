@@ -131,13 +131,13 @@ export default {
 }
 
 .discord-message .discord-message-timestamp {
-	color: #fff3;
+	color: #72767d;
 	font-size: 12px;
 	margin-left: 3px;
 }
 
 .discord-message .discord-message-edited {
-	color: #fff3;
+	color: #72767d;
 	font-size: 10px;
 }
 
