@@ -11,6 +11,7 @@
     "component",
     "embed"
   ],
+  "homepage": "https://vue-discord-message.netlify.app/",
   "repository": "https://github.com/Danktuary/vue-discord-message.git",
   "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
