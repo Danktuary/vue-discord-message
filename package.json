@@ -11,12 +11,12 @@
     "component",
     "embed"
   ],
-  "main": "dist/VueDiscordMessage.umd.js",
-  "module": "src/index.js",
-  "unpkg": "dist/VueDiscordMessage.umd.min.js",
   "repository": "https://github.com/Danktuary/vue-discord-message.git",
   "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
+  "main": "dist/VueDiscordMessage.umd.js",
+  "module": "dist/VueDiscordMessage.common.js",
+  "unpkg": "dist/VueDiscordMessage.umd.min.js",
   "scripts": {
     "build": "vue-cli-service build --target lib --name VueDiscordMessage ./src/index.js",
     "docs:serve": "vuepress dev docs --open",
