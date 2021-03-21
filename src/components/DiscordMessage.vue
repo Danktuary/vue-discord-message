@@ -118,10 +118,6 @@ export default {
 	color: #00b0f4;
 }
 
-.discord-message a:hover {
-	text-decoration: underline;
-}
-
 .discord-message .discord-author-avatar {
 	margin-top: 1px;
 	margin-right: 16px;
