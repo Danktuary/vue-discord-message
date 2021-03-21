@@ -115,4 +115,5 @@ The Discord avatar shortcut images are also no longer bundled with this package 
 
 ## Related
 
+If you use React in your project, you should use [react-discord-message](https://github.com/Danktuary/react-discord-message).
 If you want to use web components instead, use [wc-discord-message](https://github.com/Danktuary/wc-discord-message)!
