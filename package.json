@@ -1,6 +1,6 @@
 {
   "name": "vue-discord-message",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Vue components to easily build and display fake Discord messages on your webpages.",
   "keywords": [
     "vue",
