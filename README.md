@@ -7,7 +7,7 @@ If you want to use web components instead, use [wc-discord-message](https://gith
 
 ```sh
 yarn add vue-discord-message
-# or npm install vue-discord-messgae
+# or npm install vue-discord-message
 # browser build also available: https://unpkg.com/vue-discord-message
 ```
 
